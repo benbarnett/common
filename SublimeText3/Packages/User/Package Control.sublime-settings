@@ -1,0 +1,24 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"CoffeeCompile",
+		"Cucumber",
+		"DocBlockr",
+		"GitGutter",
+		"GitHubinator",
+		"Gutter Color",
+		"HTML-CSS-JS Prettify",
+		"JSHint",
+		"Markdown Preview",
+		"Package Control",
+		"SCSS",
+		"SideBarEnhancements",
+		"Theme - Flatland",
+		"Theme - Soda",
+		"Theme - Soda SolarizedDark"
+	]
+}
