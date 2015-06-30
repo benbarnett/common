@@ -17,3 +17,7 @@ In `.profile` or similar:
 ```sh
 source '/Users/bbarnett/Sites/common/aliases.sh'
 ```
+
+## iTerm
+
+In iTerm preferences, select "Load preferences from custom URL"
