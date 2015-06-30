@@ -9,3 +9,11 @@
 ```sh
 ln -s ~/Sites/common/SublimeText3 ~/Library/Application\ Support/Sublime\ Text\ 3
 ```
+
+## Aliases
+
+In `.profile` or similar:
+
+```sh
+source '/Users/bbarnett/Sites/common/aliases.sh'
+```
