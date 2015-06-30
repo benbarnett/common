@@ -5,10 +5,6 @@
 	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input Mono",
-	"font_options":
-	[
-		"gray_antialias"
-	],
 	"font_size": 14.0,
 	"ignored_packages":
 	[
