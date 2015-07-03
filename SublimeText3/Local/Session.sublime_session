@@ -1,13 +1,25 @@
 {
 	"folder_history":
 	[
+		"/Users/bbarnett/Sites/cms-editor",
+		"/Users/bbarnett/Sites/cms",
+		"/Users/bbarnett/Sites/common",
+		"/Users/bbarnett/Sites/frontend",
+		"/Users/bbarnett/Sites/pensions_calculator",
+		"/Users/bbarnett/Sites/dough",
+		"/Users/bbarnett/Downloads/polymer-starter-kit-1.0.2",
+		"/Users/bbarnett/Downloads/polymer-starter-kit-light-1.0.2",
+		"/Users/bbarnett/Sites/publify",
+		"/Users/bbarnett/Sites/made_with_dough",
+		"/Users/bbarnett/Sites/rad",
+		"/Users/bbarnett/Sites/payday_loans_intervention"
 	],
 	"last_version": 3083,
-	"last_window_id": 3,
+	"last_window_id": 28,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 480.0,
+		"new_window_height": 704.0,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -22,12 +34,16 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 0.0,
-				"last_filter": "",
+				"height": 185.0,
+				"last_filter": "java",
 				"selected_items":
 				[
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					]
 				],
-				"width": 0.0
+				"width": 444.0
 			},
 			"console":
 			{
@@ -47,16 +63,20 @@
 			},
 			"file_history":
 			[
+				"/Users/bbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings"
 			],
 			"find":
 			{
-				"height": 0.0
+				"height": 27.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 95.0,
 				"where_history":
 				[
+					"*.yml",
+					"*",
+					"*.scss"
 				]
 			},
 			"find_state":
@@ -64,6 +84,9 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"beth",
+					"You might find beth",
+					".checkbox"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -80,7 +103,7 @@
 			},
 			"incremental_find":
 			{
-				"height": 0.0
+				"height": 27.0
 			},
 			"input":
 			{
@@ -94,7 +117,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 0.0
+				"height": 50.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -103,6 +126,18 @@
 				"last_filter": "",
 				"selected_items":
 				[
+					[
+						"karma",
+						"spec/javascripts/karma.conf.js"
+					],
+					[
+						"fastl",
+						"app/assets/javascripts/pensions_calculator/modules/FastClick.js"
+					],
+					[
+						"read",
+						"README.md"
+					]
 				],
 				"width": 0.0
 			},
@@ -128,16 +163,897 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 150.0,
+			"side_bar_width": 314.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			}
 		},
-		"new_window_width": 640.0
+		"new_window_width": 1379.0
 	},
 	"windows":
 	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"get",
+						"getHeadings"
+					],
+					[
+						"conver",
+						"converter"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/src/app/app.js",
+					"settings":
+					{
+						"buffer_size": 5054,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/test/tests/editor.spec.js",
+					"settings":
+					{
+						"buffer_size": 5954,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/src/app/modules/source-converter/source-converter.js",
+					"settings":
+					{
+						"buffer_size": 1151,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/bower_components/scribe/scribe.js",
+					"settings":
+					{
+						"buffer_size": 151131,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/bower_components/marked/lib/marked.js",
+					"settings":
+					{
+						"buffer_size": 28192,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms-editor/examples/index.html",
+					"settings":
+					{
+						"buffer_size": 3719,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 185.0,
+				"last_filter": "java",
+				"selected_items":
+				[
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					]
+				],
+				"width": 444.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/Users/bbarnett/Sites/cms-editor",
+				"/Users/bbarnett/Sites/cms-editor/bower_components/marked/bin",
+				"/Users/bbarnett/Sites/cms-editor/bower_components/marked/lib",
+				"/Users/bbarnett/Sites/cms-editor/bower_components/scribe",
+				"/Users/bbarnett/Sites/cms-editor/examples/data",
+				"/Users/bbarnett/Sites/cms-editor/examples/styles",
+				"/Users/bbarnett/Sites/cms-editor/src",
+				"/Users/bbarnett/Sites/cms-editor/src/app",
+				"/Users/bbarnett/Sites/cms-editor/src/app/config",
+				"/Users/bbarnett/Sites/cms-editor/src/app/constants",
+				"/Users/bbarnett/Sites/cms-editor/src/app/modules",
+				"/Users/bbarnett/Sites/cms-editor/src/app/modules/editor-lib-wrapper",
+				"/Users/bbarnett/Sites/cms-editor/src/app/modules/source-converter",
+				"/Users/bbarnett/Sites/cms-editor/test",
+				"/Users/bbarnett/Sites/cms-editor/test/fixtures",
+				"/Users/bbarnett/Sites/cms-editor/test/helpers",
+				"/Users/bbarnett/Sites/cms-editor/test/helpers/shims",
+				"/Users/bbarnett/Sites/cms-editor/test/tests"
+			],
+			"file_history":
+			[
+				"/Users/bbarnett/Sites/cms-editor/.git/COMMIT_EDITMSG",
+				"/Users/bbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/bbarnett/.zsh_history",
+				"/Users/bbarnett/Sites/frontend/.git/COMMIT_EDITMSG",
+				"/Users/bbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings"
+			],
+			"find":
+			{
+				"height": 37.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"*.js",
+					"*.scss",
+					"*.yml",
+					"*",
+					"*.scss"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"content:updated",
+					"setContent(",
+					"setContent",
+					"render",
+					"button",
+					"category-detail__view-more",
+					"beth",
+					"You might find beth",
+					".checkbox"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/Users/bbarnett/Sites/cms-editor"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/Users/bbarnett/Sites/cms-editor/src/app/app.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5054,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3548,
+										3563
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 2190.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/Users/bbarnett/Sites/cms-editor/test/tests/editor.spec.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5954,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3939,
+										3939
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 2518.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/Users/bbarnett/Sites/cms-editor/src/app/modules/source-converter/source-converter.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1151,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										149,
+										155
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/Users/bbarnett/Sites/cms-editor/bower_components/scribe/scribe.js",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 151131,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										148027,
+										148012
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": -0.0,
+								"translation.y": 85125.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/Users/bbarnett/Sites/cms-editor/bower_components/marked/lib/marked.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 28192,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										18099,
+										18099
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 14642.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/Users/bbarnett/Sites/cms-editor/examples/index.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3719,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2957,
+										2957
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1367.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0 36 105 1379 726 0 0 1440 877 ",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"read",
+						"README.md"
+					],
+					[
+						"karma",
+						"spec/javascripts/karma.conf.js"
+					],
+					[
+						"fastl",
+						"app/assets/javascripts/pensions_calculator/modules/FastClick.js"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 314.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 28,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/MASEditor.js",
+					"settings":
+					{
+						"buffer_size": 7571,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/UnsavedChangesPrompt.js",
+					"settings":
+					{
+						"buffer_size": 1625,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "Searching 9015 files for \"content:updated\"\n\n/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/WordCount.js:\n   33      this.displayText = this.$display.attr('data-dough-wordcount-text');\n   34  \n   35:     eventsWithPromises.subscribe('content:updated', $.proxy(function(mode) {\n   36        this.updateDisplay(this.$el.text(), mode);\n   37      }, this));\n\n/Users/bbarnett/Sites/cms/spec/javascripts/tests/WordCount_spec.js:\n  124        this.component.init();\n  125        expect(this.component.$display.hasClass(this.component.config.selectors.hiddenClass)).to.be.false;\n  126:       this.eventsWithPromises.publish('content:updated', 'markdown');\n  127        expect(this.component.$display.hasClass(this.component.config.selectors.hiddenClass)).to.be.true;\n  128      });\n\n/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/app.js:\n  130      Editor.prototype.setHTMLContent = function(html) {\n  131        this.editor.setContent(html);\n  132:       this.events.publish('content:updated', constants.MODES.HTML);\n  133        return this;\n  134      };\n  ...\n  149      Editor.prototype.setMarkdownContent = function(markdown) {\n  150        this.markdownEditorNode.value = markdown;\n  151:       this.events.publish('content:updated', constants.MODES.MARKDOWN);\n  152        return this;\n  153      };\n\n/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/plugins/editor-auto-resize-textarea/editor-auto-resize-textarea.js:\n   11        };\n   12        markdownEditorNode.addEventListener('input', handleContentUpdate);\n   13:       editor.events.subscribe('content:updated', function(mode) {\n   14          if(mode === editor.constants.MODES.MARKDOWN) {\n   15            handleContentUpdate(mode);\n\n5 matches across 4 files\n",
+					"settings":
+					{
+						"buffer_size": 1824,
+						"line_ending": "Unix",
+						"name": "Find Results",
+						"scratch": true
+					}
+				},
+				{
+					"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/WordCount.js",
+					"settings":
+					{
+						"buffer_size": 1792,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 185.0,
+				"last_filter": "java",
+				"selected_items":
+				[
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					]
+				],
+				"width": 444.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/Users/bbarnett/Sites/cms",
+				"/Users/bbarnett/Sites/cms/app",
+				"/Users/bbarnett/Sites/cms/app/assets",
+				"/Users/bbarnett/Sites/cms/app/assets/javascripts",
+				"/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa",
+				"/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin",
+				"/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules",
+				"/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/utils",
+				"/Users/bbarnett/Sites/cms/vendor",
+				"/Users/bbarnett/Sites/cms/vendor/assets",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/config",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/constants",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/modules",
+				"/Users/bbarnett/Sites/cms/vendor/assets/bower_components/mas-cms-editor/src/app/plugins",
+				"/Users/bbarnett/Sites/cms/vendor/assets/non_bower_components"
+			],
+			"file_history":
+			[
+				"/Users/bbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/bbarnett/.zsh_history",
+				"/Users/bbarnett/Sites/frontend/.git/COMMIT_EDITMSG",
+				"/Users/bbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings"
+			],
+			"find":
+			{
+				"height": 27.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"*.js",
+					"*.scss",
+					"*.yml",
+					"*",
+					"*.scss"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"content:updated",
+					"button",
+					"category-detail__view-more",
+					"beth",
+					"You might find beth",
+					".checkbox"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/Users/bbarnett/Sites/cms"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 1,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/MASEditor.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 7571,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1723,
+										1723
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 664.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/UnsavedChangesPrompt.js",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 1625,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 505.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1824,
+								"regions":
+								{
+									"match":
+									{
+										"flags": 112,
+										"regions":
+										[
+											[
+												274,
+												289
+											],
+											[
+												658,
+												673
+											],
+											[
+												1043,
+												1058
+											],
+											[
+												1289,
+												1304
+											],
+											[
+												1657,
+												1672
+											]
+										],
+										"scope": ""
+									}
+								},
+								"selection":
+								[
+									[
+										280,
+										280
+									]
+								],
+								"settings":
+								{
+									"default_dir": "/Users/bbarnett/Sites/cms",
+									"detect_indentation": false,
+									"line_numbers": false,
+									"output_tag": 1,
+									"result_base_dir": "",
+									"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+									"result_line_regex": "^ +([0-9]+):",
+									"scroll_past_end": true,
+									"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/Users/bbarnett/Sites/cms/app/assets/javascripts/comfortable_mexican_sofa/admin/modules/WordCount.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1792,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										786,
+										786
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 328.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0 18 19 1379 726 0 0 1440 877 ",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"read",
+						"README.md"
+					],
+					[
+						"karma",
+						"spec/javascripts/karma.conf.js"
+					],
+					[
+						"fastl",
+						"app/assets/javascripts/pensions_calculator/modules/FastClick.js"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 314.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 27,
+			"workspace_name": ""
+		}
 	],
 	"workspaces":
 	{
