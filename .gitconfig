@@ -1,0 +1,12 @@
+[user]
+  name = Ben Barnett
+  email = ben.barnett@brushfiredesign.net
+[push]
+  default = simple
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[alias]
+  df = diff --color --color-words --abbrev
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  co = checkout

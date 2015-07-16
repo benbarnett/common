@@ -10,6 +10,12 @@
 ln -s ~/Sites/common/SublimeText3 ~/Library/Application\ Support/Sublime\ Text\ 3
 ```
 
+## Git config
+
+```sh
+ln -s ~/Sites/common/.gitconfig ~/.gitconfig
+```
+
 ## Aliases
 
 In `.profile` or similar:
