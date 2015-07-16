@@ -10,10 +10,10 @@
 ln -s ~/Sites/common/SublimeText3 ~/Library/Application\ Support/Sublime\ Text\ 3
 ```
 
-## Git config
+## Dotfiles
 
 ```sh
-ln -s ~/Sites/common/.gitconfig ~/.gitconfig
+./symlink-setup.sh # safe to run multiple times
 ```
 
 ## Aliases
