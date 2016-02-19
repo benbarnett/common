@@ -1,10 +1,10 @@
 {
 	"folder_history":
 	[
-		"/Users/benbarnett/Sites/pw/output",
-		"/Users/benbarnett/Sites/pw/pension_guidance",
-		"/Users/benbarnett/Sites/pw/output-templates",
 		"/Users/benbarnett/Sites/pw/pdf_output",
+		"/Users/benbarnett/Sites/pw/output-templates",
+		"/Users/benbarnett/Sites/pw/pension_guidance",
+		"/Users/benbarnett/Sites/pw/output",
 		"/Users/benbarnett/Sites/benbarnett.github.com",
 		"/Users/benbarnett/Sites/remark",
 		"/Users/benbarnett/Sites/gds/govspeak",
@@ -48,8 +48,8 @@
 		"/Users/bbarnett/Sites/rad",
 		"/Users/bbarnett/Sites/payday_loans_intervention"
 	],
-	"last_version": 3083,
-	"last_window_id": 172,
+	"last_version": 3103,
+	"last_window_id": 180,
 	"log_indexing": false,
 	"settings":
 	{
@@ -232,10 +232,14 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 97.0,
-				"last_filter": "rmove",
+				"height": 354.0,
+				"last_filter": "",
 				"selected_items":
 				[
+					[
+						"markd",
+						"Markdown Preview: Preview in Browser"
+					],
 					[
 						"rmove",
 						"Package Control: Remove Package"
@@ -309,10 +313,6 @@
 						"File: Move"
 					],
 					[
-						"markd",
-						"Markdown Preview: Preview in Browser"
-					],
-					[
 						"rename",
 						"File: Rename"
 					],
@@ -365,7 +365,7 @@
 						"Set Syntax: JavaScript"
 					]
 				],
-				"width": 534.0
+				"width": 530.0
 			},
 			"console":
 			{
@@ -385,11 +385,12 @@
 			},
 			"file_history":
 			[
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
 				"/Users/benbarnett/Sites/pw/pension_guidance/lib/leave_pot_untouched_calculator.rb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/application.js",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
-				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures/calculator.html",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/calculatorSpec.js",
@@ -511,12 +512,11 @@
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/full_width.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/pages.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/styleguide/pages/homepage.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/default.html.erb"
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb"
 			],
 			"find":
 			{
-				"height": 29.0
+				"height": 30.0
 			},
 			"find_in_files":
 			{
@@ -711,7 +711,7 @@
 			},
 			"incremental_find":
 			{
-				"height": 29.0
+				"height": 30.0
 			},
 			"input":
 			{
@@ -729,7 +729,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 54.0
+				"height": 56.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -739,16 +739,20 @@
 				"selected_items":
 				[
 					[
+						"calcscs",
+						"app/assets/stylesheets/components/_calculator.scss"
+					],
+					[
+						"calc",
+						"app/assets/javascripts/calculators.js"
+					],
+					[
 						"",
 						"lib/leave_pot_untouched_calculator.rb"
 					],
 					[
 						"vari",
 						"app/assets/stylesheets/lib/_variables.scss"
-					],
-					[
-						"calc",
-						"app/assets/javascripts/calculators.js"
 					],
 					[
 						"appl",
@@ -1245,10 +1249,6 @@
 					[
 						"full",
 						"app/views/layouts/styleguide/full_width.html.erb"
-					],
-					[
-						"mobile",
-						"app/assets/javascripts/mobile-nav-toggler.js"
 					]
 				],
 				"width": 0.0
@@ -1459,10 +1459,21 @@
 			"buffers":
 			[
 				{
-					"file": "/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
+					"contents": "require 'action_view'\nrequire 'pathname'\nrequire 'sass'\n\nmodule Output\n  module Templates\n    class HTMLRenderingContext < SimpleDelegator\n      include ActionView::Helpers::TextHelper\n\n      attr_reader :asset_root\n      private :asset_root\n\n      def initialize(data, asset_root: '')\n        super(data)\n        @asset_root = Pathname.new(asset_root)\n      end\n\n      def binding\n        Kernel.binding\n      end\n\n      def stylesheet(base_file_name)\n        sass = File.read(stylesheet_path(base_file_name))\n        css = Sass.compile(sass)\n\n        \"<style>\\n#{css}\\n</style>\"\n      end\n\n      def theme_large\n      end\n\n      private\n\n      def stylesheet_path(base_file_name)\n        Pathname.new(asset_root).join('stylesheets', \"#{base_file_name}.css.scss\")\n      end\n    end\n  end\nend\n",
+					"file": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/html_rendering_context.rb",
+					"file_size": 760,
+					"file_write_time": 130911043440000000,
 					"settings":
 					{
-						"buffer_size": 728,
+						"buffer_size": 793,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/template.rb",
+					"settings":
+					{
+						"buffer_size": 503,
 						"line_ending": "Unix"
 					}
 				}
@@ -1474,8 +1485,8 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 207.0,
-				"last_filter": "markd",
+				"height": 354.0,
+				"last_filter": "",
 				"selected_items":
 				[
 					[
@@ -1607,7 +1618,7 @@
 						"Set Syntax: JavaScript"
 					]
 				],
-				"width": 561.0
+				"width": 530.0
 			},
 			"console":
 			{
@@ -1625,13 +1636,23 @@
 				"side_bar_visible": false,
 				"status_bar_visible": false
 			},
+			"expanded_folders":
+			[
+				"/Users/benbarnett/Sites/pw/output-templates",
+				"/Users/benbarnett/Sites/pw/output-templates/assets",
+				"/Users/benbarnett/Sites/pw/output-templates/assets/markup",
+				"/Users/benbarnett/Sites/pw/output-templates/lib",
+				"/Users/benbarnett/Sites/pw/output-templates/lib/output",
+				"/Users/benbarnett/Sites/pw/output-templates/lib/output/templates"
+			],
 			"file_history":
 			[
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
 				"/Users/benbarnett/Sites/pw/pension_guidance/lib/leave_pot_untouched_calculator.rb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/application.js",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
-				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures/calculator.html",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/calculatorSpec.js",
@@ -1753,12 +1774,11 @@
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/full_width.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/pages.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/styleguide/pages/homepage.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/default.html.erb"
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb"
 			],
 			"find":
 			{
-				"height": 29.0
+				"height": 30.0
 			},
 			"find_in_files":
 			{
@@ -1951,36 +1971,76 @@
 				"whole_word": false,
 				"wrap": true
 			},
+			"folders":
+			[
+				{
+					"path": "/Users/benbarnett/Sites/pw/output-templates"
+				}
+			],
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 1,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
+							"file": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/html_rendering_context.rb",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 728,
+								"buffer_size": 793,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										506,
-										506
+										613,
+										613
 									]
 								],
 								"settings":
 								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
-									"parser": "github",
-									"syntax": "Packages/Markdown/Markdown.tmLanguage",
-									"target": "browser"
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/html_rendering_context.rb",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/output-templates",
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 242.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/template.rb",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 503,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										186,
+										186
+									]
+								],
+								"settings":
+								{
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/output-templates/lib/output/templates/template.rb",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/output-templates",
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -1994,7 +2054,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 29.0
+				"height": 30.0
 			},
 			"input":
 			{
@@ -2036,7 +2096,7 @@
 			"project": "",
 			"replace":
 			{
-				"height": 54.0
+				"height": 56.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -2046,16 +2106,20 @@
 				"selected_items":
 				[
 					[
+						"calcscs",
+						"app/assets/stylesheets/components/_calculator.scss"
+					],
+					[
+						"calc",
+						"app/assets/javascripts/calculators.js"
+					],
+					[
 						"",
 						"lib/leave_pot_untouched_calculator.rb"
 					],
 					[
 						"vari",
 						"app/assets/stylesheets/lib/_variables.scss"
-					],
-					[
-						"calc",
-						"app/assets/javascripts/calculators.js"
 					],
 					[
 						"appl",
@@ -2552,10 +2616,6 @@
 					[
 						"full",
 						"app/views/layouts/styleguide/full_width.html.erb"
-					],
-					[
-						"mobile",
-						"app/assets/javascripts/mobile-nav-toggler.js"
 					]
 				],
 				"width": 0.0
@@ -2591,7 +2651,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 172,
+			"window_id": 179,
 			"workspace_name": ""
 		},
 		{
@@ -2600,20 +2660,12 @@
 				"selected_items":
 				[
 					[
-						"exp",
-						"exp-slider-abs"
-					],
-					[
-						"targ",
-						"targetData"
+						"ca",
+						"calculator"
 					],
 					[
 						"new",
-						"newValue"
-					],
-					[
-						"ca",
-						"calculator"
+						"newWidth"
 					],
 					[
 						"newP",
@@ -2629,6 +2681,10 @@
 					],
 					[
 						"tar",
+						"targetElement"
+					],
+					[
+						"targ",
 						"targetElement"
 					],
 					[
@@ -2682,6 +2738,10 @@
 					[
 						"submi",
 						"submitButton"
+					],
+					[
+						"exp",
+						"expected_urls"
 					],
 					[
 						"aside",
@@ -2768,116 +2828,10 @@
 			"buffers":
 			[
 				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
+					"file": "/Users/benbarnett/Sites/pw/pdf_output/app/domain/output_document/html_renderer.rb",
 					"settings":
 					{
-						"buffer_size": 5837,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers/_highlight.scss",
-					"settings":
-					{
-						"buffer_size": 283,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_estimate.html.erb",
-					"settings":
-					{
-						"buffer_size": 4187,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_slider.scss",
-					"settings":
-					{
-						"buffer_size": 1336,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/lib/_variables.scss",
-					"settings":
-					{
-						"buffer_size": 2166,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/forms/calculators/leave_pot_untouched_form.rb",
-					"settings":
-					{
-						"buffer_size": 1014,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/calculators/leave_pot_untouched_controller.rb",
-					"settings":
-					{
-						"buffer_size": 489,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_forms.scss",
-					"settings":
-					{
-						"buffer_size": 134,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_calculator.html.erb",
-					"settings":
-					{
-						"buffer_size": 266,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/_form_input_currency.html.erb",
-					"settings":
-					{
-						"buffer_size": 730,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_type.scss",
-					"settings":
-					{
-						"buffer_size": 576,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
-					"settings":
-					{
-						"buffer_size": 1266,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "Searching 96 files for \".block-label\"\n\n/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements/forms/_form-block-labels.scss:\n    8  \n    9  // By default, block labels stack vertically\n   10: .block-label {\n   11  \n   12    display: block;\n   ..\n   41  }\n   42  \n   43: .block-label:last-child {\n   44    margin-bottom: 0;\n   45  }\n   46  \n   47  // To stack horizontally, use .inline on parent, to sit block labels next to each other\n   48: .inline .block-label {\n   49    clear: none;\n   50    margin-right: 10px;\n\n3 matches in 1 file\n",
-					"settings":
-					{
-						"buffer_size": 593,
-						"line_ending": "Unix",
-						"name": "Find Results",
-						"scratch": true
-					}
-				},
-				{
-					"file": "/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements/forms/_form-block-labels.scss",
-					"settings":
-					{
-						"buffer_size": 1325,
+						"buffer_size": 465,
 						"line_ending": "Unix"
 					}
 				}
@@ -2889,10 +2843,14 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 97.0,
-				"last_filter": "rmove",
+				"height": 354.0,
+				"last_filter": "",
 				"selected_items":
 				[
+					[
+						"markd",
+						"Markdown Preview: Preview in Browser"
+					],
 					[
 						"rmove",
 						"Package Control: Remove Package"
@@ -2966,10 +2924,6 @@
 						"File: Move"
 					],
 					[
-						"markd",
-						"Markdown Preview: Preview in Browser"
-					],
-					[
 						"rename",
 						"File: Rename"
 					],
@@ -3022,7 +2976,7 @@
 						"Set Syntax: JavaScript"
 					]
 				],
-				"width": 534.0
+				"width": 530.0
 			},
 			"console":
 			{
@@ -3042,40 +2996,21 @@
 			},
 			"expanded_folders":
 			[
-				"/Users/benbarnett/Sites/pw/pension_guidance",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout/page",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/controllers",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/calculators",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/domain",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/forms",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/forms/calculators",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/repositories",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/guides",
-				"/Users/benbarnett/Sites/pw/pension_guidance/config/locales",
-				"/Users/benbarnett/Sites/pw/pension_guidance/lib",
-				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts",
-				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures",
-				"/Users/benbarnett/Sites/pw/pension_guidance/spec/lib",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements/forms"
+				"/Users/benbarnett/Sites/pw/pdf_output",
+				"/Users/benbarnett/Sites/pw/pdf_output/app",
+				"/Users/benbarnett/Sites/pw/pdf_output/app/domain",
+				"/Users/benbarnett/Sites/pw/pdf_output/app/domain/output_document",
+				"/Users/benbarnett/Sites/pw/pdf_output/app/models",
+				"/Users/benbarnett/Sites/pw/pdf_output/lib"
 			],
 			"file_history":
 			[
-				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
 				"/Users/benbarnett/Sites/pw/pension_guidance/lib/leave_pot_untouched_calculator.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/application.js",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
-				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/pw/pension_guidance/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures/calculator.html",
 				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/calculatorSpec.js",
@@ -3197,12 +3132,11 @@
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/full_width.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/pages.html.erb",
 				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/styleguide/pages/homepage.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/default.html.erb"
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb"
 			],
 			"find":
 			{
-				"height": 39.0
+				"height": 30.0
 			},
 			"find_in_files":
 			{
@@ -3244,13 +3178,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					" step=\"5\"",
-					"el.",
-					"el",
-					"El",
-					"el",
-					"addListe",
-					"contribution.to_f * 3",
+					"\n",
 					"yellow-fade",
 					"in",
 					"2s",
@@ -3371,7 +3299,13 @@
 					"supplementary_ill_health",
 					"theme_large",
 					"variant_large",
-					"supplementary_benefits"
+					"supplementary_benefits",
+					"width: 300px;",
+					"kramdown",
+					"pick",
+					" class=\"sticky-sidebar__item\"",
+					".sticky-sidebar__",
+					"a href=\"#\""
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -3398,472 +3332,22 @@
 			"folders":
 			[
 				{
-					"path": "/Users/benbarnett/Sites/pw/pension_guidance"
+					"path": "/Users/benbarnett/Sites/pw/pdf_output"
 				}
 			],
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 0,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
-							"semi_transient": false,
+							"file": "/Users/benbarnett/Sites/pw/pdf_output/app/domain/output_document/html_renderer.rb",
+							"semi_transient": true,
 							"settings":
 							{
-								"buffer_size": 5837,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										954,
-										954
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 568.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers/_highlight.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 283,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										200,
-										200
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers/_highlight.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"open_with_edit": true,
-									"syntax": "Packages/SCSS/SCSS.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 6,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_estimate.html.erb",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 4187,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2623,
-										2623
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_estimate.html.erb",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true,
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 922.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_slider.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1336,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										323,
-										323
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_slider.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"open_with_edit": true,
-									"syntax": "Packages/SCSS/SCSS.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
-						},
-						{
-							"buffer": 4,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/lib/_variables.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 2166,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1092,
-										1059
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/lib/_variables.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/SCSS/SCSS.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 336.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 9,
-							"type": "text"
-						},
-						{
-							"buffer": 5,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/forms/calculators/leave_pot_untouched_form.rb",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1014,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										675,
-										675
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/forms/calculators/leave_pot_untouched_form.rb",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/Ruby/Ruby.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 249.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 3,
-							"type": "text"
-						},
-						{
-							"buffer": 6,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/calculators/leave_pot_untouched_controller.rb",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 489,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										469,
-										469
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/calculators/leave_pot_untouched_controller.rb",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/Ruby/Ruby.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 4,
-							"type": "text"
-						},
-						{
-							"buffer": 7,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_forms.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 134,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										80,
-										80
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_forms.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/SCSS/SCSS.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 10,
-							"type": "text"
-						},
-						{
-							"buffer": 8,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_calculator.html.erb",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 266,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										156,
-										156
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_calculator.html.erb",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 5,
-							"type": "text"
-						},
-						{
-							"buffer": 9,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/_form_input_currency.html.erb",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 730,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										716,
-										716
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/_form_input_currency.html.erb",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true,
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 12,
-							"type": "text"
-						},
-						{
-							"buffer": 10,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_type.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 576,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										573,
-										573
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/base/_type.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/SCSS/SCSS.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 13,
-							"type": "text"
-						},
-						{
-							"buffer": 11,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1266,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										78,
-										78
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/SCSS/SCSS.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 11,
-							"type": "text"
-						},
-						{
-							"buffer": 12,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 593,
-								"regions":
-								{
-									"match":
-									{
-										"flags": 112,
-										"regions":
-										[
-											[
-												248,
-												260
-											],
-											[
-												326,
-												338
-											],
-											[
-												506,
-												518
-											]
-										],
-										"scope": ""
-									}
-								},
-								"selection":
-								[
-									[
-										172,
-										172
-									]
-								],
-								"settings":
-								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"default_dir": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"detect_indentation": false,
-									"git_savvy.file_path": null,
-									"line_numbers": false,
-									"output_tag": 1,
-									"result_base_dir": "",
-									"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-									"result_line_regex": "^ +([0-9]+):",
-									"scroll_past_end": true,
-									"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 7,
-							"type": "text"
-						},
-						{
-							"buffer": 13,
-							"file": "/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements/forms/_form-block-labels.scss",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1325,
+								"buffer_size": 465,
 								"regions":
 								{
 								},
@@ -3876,10 +3360,9 @@
 								],
 								"settings":
 								{
-									"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark.tmTheme",
-									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/public/sass/elements/forms/_form-block-labels.scss",
-									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
-									"syntax": "Packages/SCSS/SCSS.tmLanguage",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pdf_output/app/domain/output_document/html_renderer.rb",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pdf_output",
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
 									"tab_size": 2,
 									"translate_tabs_to_spaces": true
 								},
@@ -3887,7 +3370,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 8,
+							"stack_index": 0,
 							"type": "text"
 						}
 					]
@@ -3895,7 +3378,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 29.0
+				"height": 30.0
 			},
 			"input":
 			{
@@ -3933,11 +3416,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0 21 36 1235 723 0 0 1280 777 ",
+			"position": "0 22 36 1235 723 0 0 1280 777 ",
 			"project": "",
 			"replace":
 			{
-				"height": 54.0
+				"height": 56.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -3947,16 +3430,20 @@
 				"selected_items":
 				[
 					[
-						"",
-						"app/assets/javascripts/calculators.js"
-					],
-					[
-						"vari",
-						"app/assets/stylesheets/lib/_variables.scss"
+						"calcscs",
+						"app/assets/stylesheets/components/_calculator.scss"
 					],
 					[
 						"calc",
 						"app/assets/javascripts/calculators.js"
+					],
+					[
+						"",
+						"lib/leave_pot_untouched_calculator.rb"
+					],
+					[
+						"vari",
+						"app/assets/stylesheets/lib/_variables.scss"
 					],
 					[
 						"appl",
@@ -4453,10 +3940,6 @@
 					[
 						"full",
 						"app/views/layouts/styleguide/full_width.html.erb"
-					],
-					[
-						"mobile",
-						"app/assets/javascripts/mobile-nav-toggler.js"
 					]
 				],
 				"width": 0.0
@@ -4492,7 +3975,1554 @@
 			"template_settings":
 			{
 			},
-			"window_id": 166,
+			"window_id": 180,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"ca",
+						"calculator"
+					],
+					[
+						"new",
+						"newWidth"
+					],
+					[
+						"newP",
+						"newPlace"
+					],
+					[
+						"form",
+						"formData"
+					],
+					[
+						"submit",
+						"submitForm"
+					],
+					[
+						"tar",
+						"targetElement"
+					],
+					[
+						"targ",
+						"targetElement"
+					],
+					[
+						"pre",
+						"preventDefault()	Event"
+					],
+					[
+						"cons",
+						"console.log()"
+					],
+					[
+						"docum",
+						"document.URL	Document"
+					],
+					[
+						"sub",
+						"sub_category"
+					],
+					[
+						"gr",
+						"grouped"
+					],
+					[
+						"cal",
+						"calculators"
+					],
+					[
+						"calc",
+						"calculator"
+					],
+					[
+						"update",
+						"updateResults"
+					],
+					[
+						"aja",
+						"ajaxPromise"
+					],
+					[
+						"scroll",
+						"scrollPromise"
+					],
+					[
+						"loading",
+						"loadingIndicator"
+					],
+					[
+						"call",
+						"callThrough"
+					],
+					[
+						"submi",
+						"submitButton"
+					],
+					[
+						"exp",
+						"expected_urls"
+					],
+					[
+						"aside",
+						"aside_link_hrefs"
+					],
+					[
+						"secti",
+						"section_headings"
+					],
+					[
+						"rel",
+						"related_to_booking"
+					],
+					[
+						"ba",
+						"background-repeat"
+					],
+					[
+						"svg-c",
+						"svg-calculator"
+					],
+					[
+						"tr",
+						"trigger"
+					],
+					[
+						"send",
+						"sendEventOnlyOnce"
+					],
+					[
+						"click",
+						"clickEventLogger"
+					],
+					[
+						"mob",
+						"mobileNavToggler"
+					],
+					[
+						"data",
+						"dataLayer"
+					],
+					[
+						"bor",
+						"border-colour"
+					],
+					[
+						"appoin",
+						"appointment_summary"
+					],
+					[
+						"back",
+						"background-color"
+					],
+					[
+						"backgroun",
+						"background-repeat"
+					],
+					[
+						"Hel",
+						"HelveticaNeueLTStd-Md"
+					],
+					[
+						"backgr",
+						"background-size"
+					],
+					[
+						"bakgroun",
+						"background-repeat"
+					],
+					[
+						"color",
+						"color-blue"
+					],
+					[
+						"get",
+						"getHeadings"
+					],
+					[
+						"conver",
+						"converter"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"contents": "(function($) {\n  'use strict';\n\n  var calculators = {\n    scrollSpeed: 700,\n    experiment: window.location.hash ? window.location.hash.substr(1) : '',\n    request: null,\n\n    init: function() {\n      this._initDOM();\n      this._addListeners();\n\n      if (this.experiment) {\n        $(window).on('hashchange', function() {\n          if (window.location.hash.indexOf('exp') >= 1) {\n            window.location.reload();\n          }\n        });\n      }\n    },\n\n    submitForm: function() {\n      var $form = this.$calculator.find('form');\n      var formData = $form.serialize();\n\n      formData += '&experiment=' + this.experiment;\n\n      this._toggleLoading(true);\n\n      if (this.request) {\n        this.request.abort();\n      }\n\n      this.request = $.get($form.attr('action'), formData);\n\n      return this.request;\n    },\n\n    updateEstimate: function(data) {\n      this.$calculator.removeClass('hide-from-print');\n      this._refresh(data);\n\n      if (this.experiment == 'exp-slider' || this.experiment == 'exp-slider-abs') {\n        $(\"input[type='range']\", this.$calculator).change();\n      }\n\n      this._scrollTo(this.$submitButton).then($.proxy(function() {\n        this._toggleLoading(false);\n      }, this));\n    },\n\n    handleError: function(xhr) {\n      this._refresh(xhr.responseText);\n      this._scrollTo(this.$calculator).then($.proxy(function() {\n        this._toggleLoading(false);\n      }, this));\n    },\n\n    _refresh: function(html, $partial) {\n      var $target = this.$calculator;\n      if ($partial) {\n        $target = $partial;\n      }\n\n      $target.empty().html(html).find('#js-estimate').removeClass('highlight').addClass('highlight');\n\n      this._cacheElements();\n    },\n\n    _initDOM: function() {\n      this.$calculator = $('.js-calculator').attr('aria-live', 'polite');\n      this._cacheElements();\n    },\n\n    _cacheElements: function() {\n      this.$submitButton = this.$calculator.find('.js-calculate-submit');\n      this.$estimate = this.$calculator.find('.js-calculator-estimate');\n\n      if (!this.$loadingStatus || this.$loadingStatus.length < 1) {\n        this.$loadingStatus = $('<span class=\"calculator__loading-status\">Please wait...</span>').\n                             insertAfter(this.$submitButton);\n      }\n    },\n\n    _addListeners: function() {\n      this.$calculator.on('submit', 'form', $.proxy(function(event) {\n        event.preventDefault();\n        this.submitForm()\n          .then($.proxy(this.updateEstimate, this))\n          .fail($.proxy(this.handleError, this));\n      }, this));\n\n      this.$calculator.on('click input change', '[data-adjuster]', $.proxy(function(event) {\n        var $adjuster = $(event.currentTarget);\n        var targetData = $adjuster.data('adjuster').split('|');\n        var $targetElement = this.$calculator.find('#' + targetData[0]);\n        var targetValue = targetData[1];\n        var newValue = 0;\n\n        // 'x' means we have a dynamic value to work out somewhere\n        if (targetValue !== 'x') {\n          newValue = parseFloat($targetElement.data('value')) + parseFloat(targetValue);\n          $targetElement.val(newValue);\n        }\n\n        if (this.experiment == 'exp-buttons') {\n          this.$submitButton.click();\n          event.preventDefault();\n        }\n\n        if (this.experiment == 'exp-radios') {\n          this._updateEstimateOnly();\n        }\n\n        if (this.experiment == 'exp-slider' || this.experiment == 'exp-slider-abs') {\n          var newPoint, newPlace, newWidth, offset, width;\n          var buffer = null;\n          var output = $adjuster.next(\"output\");\n\n          // Measure width of range input\n          width = $adjuster.width();\n\n          // Figure out placement percentage between left and right of input\n          newPoint = ($adjuster.val() - $adjuster.attr(\"min\")) / ($adjuster.attr(\"max\") - $adjuster.attr(\"min\"));\n\n          // Prevent bubble from going beyond left or right (unsupported browsers)\n          if (newPoint < 0) { newPlace = 0; }\n          else if (newPoint > 1) { newPlace = width; }\n          else { newPlace = width * newPoint; }\n\n          output.text('£' + $adjuster.val());\n\n          newWidth = output.outerWidth();\n          output.css({\n            left: newPlace,\n            marginLeft: -(newWidth / 2)\n          });\n\n          // update form fields and resubmit\n          clearTimeout(buffer);\n          buffer = setTimeout($.proxy(function() {\n            newValue = parseFloat($targetElement.data('value')) + parseFloat($adjuster.val());\n\n            if (this.experiment == 'exp-slider-abs') {\n              newValue = parseFloat($adjuster.val());\n            }\n\n            $targetElement.val(newValue);\n            this._updateEstimateOnly();\n          }, this), 150);\n        }\n\n      }, this));\n    },\n\n    _updateEstimateOnly: function() {\n      this.submitForm().then($.proxy(function(data) {\n        var $empty = $('<div/>');\n        var $estimate = $empty.append(data).find('#js-estimate');\n        this._refresh($estimate, $('#js-estimate'));\n\n        this._scrollTo(this.$submitButton).then($.proxy(function() {\n          this._toggleLoading(false);\n        }, this));\n\n      }, this));\n    },\n\n    _toggleLoading: function(isLoading) {\n      this.$loadingStatus[isLoading ? 'addClass' : 'removeClass']('calculator__loading-status--loading');\n    },\n\n    _scrollTo: function($el) {\n      var offset = $el.offset() || {};\n      var target = offset.top || 0;\n      var $page = $('html, body');\n\n      $page.on(\"scroll mousedown wheel DOMMouseScroll mousewheel touchmove\", function(){\n        $page.stop();\n      });\n\n      return $('html, body').animate({\n        scrollTop: target\n      }, this.scrollSpeed).promise().then(function() {\n        $page.off(\"scroll mousedown wheel DOMMouseScroll mousewheel touchmove\");\n      });\n    }\n  };\n\n  window.PWPG = window.PWPG || {};\n  window.PWPG.calculators = calculators;\n})(jQuery);\n",
+					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
+					"file_size": 5910,
+					"file_write_time": 130995707360000000,
+					"settings":
+					{
+						"buffer_size": 5909,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "/*\nOn OS X, basic text manipulations (left, right, command+left, etc) make use of the system key bindings,\nand don't need to be repeated here. Anything listed here will take precedence, however.\n*/\n[\n	{ \"keys\": [\"super+shift+n\"], \"command\": \"new_window\" },\n	{ \"keys\": [\"super+shift+w\"], \"command\": \"close_window\" },\n	{ \"keys\": [\"super+o\"], \"command\": \"prompt_open\" },\n	{ \"keys\": [\"super+shift+t\"], \"command\": \"reopen_last_file\" },\n	{ \"keys\": [\"super+alt+up\"], \"command\": \"switch_file\", \"args\": {\"extensions\": [\"cpp\", \"cxx\", \"cc\", \"c\", \"hpp\", \"hxx\", \"hh\", \"h\", \"ipp\", \"inl\", \"m\", \"mm\"]} },\n	{ \"keys\": [\"super+n\"], \"command\": \"new_file\" },\n	{ \"keys\": [\"super+s\"], \"command\": \"save\" },\n	{ \"keys\": [\"super+shift+s\"], \"command\": \"prompt_save_as\" },\n	{ \"keys\": [\"super+alt+s\"], \"command\": \"save_all\" },\n	{ \"keys\": [\"super+w\"], \"command\": \"close\" },\n\n	{ \"keys\": [\"super+k\", \"super+b\"], \"command\": \"toggle_side_bar\" },\n	{ \"keys\": [\"super+ctrl+f\"], \"command\": \"toggle_full_screen\" },\n	{ \"keys\": [\"super+ctrl+shift+f\"], \"command\": \"toggle_distraction_free\" },\n\n	{ \"keys\": [\"super+z\"], \"command\": \"undo\" },\n	{ \"keys\": [\"super+shift+z\"], \"command\": \"redo\" },\n	{ \"keys\": [\"super+y\"], \"command\": \"redo_or_repeat\" },\n	{ \"keys\": [\"super+u\"], \"command\": \"soft_undo\" },\n	{ \"keys\": [\"super+shift+u\"], \"command\": \"soft_redo\" },\n\n	{ \"keys\": [\"super+x\"], \"command\": \"cut\" },\n	{ \"keys\": [\"super+c\"], \"command\": \"copy\" },\n	{ \"keys\": [\"super+v\"], \"command\": \"paste\" },\n	{ \"keys\": [\"super+shift+v\"], \"command\": \"paste_and_indent\" },\n	{ \"keys\": [\"super+k\", \"super+v\"], \"command\": \"paste_from_history\" },\n	{ \"keys\": [\"super+option+v\"], \"command\": \"paste_from_history\" },\n\n	{ \"keys\": [\"ctrl+alt+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false} },\n	{ \"keys\": [\"ctrl+alt+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true} },\n	{ \"keys\": [\"ctrl+alt+shift+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"ctrl+alt+shift+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"ctrl+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false} },\n	{ \"keys\": [\"ctrl+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true} },\n	{ \"keys\": [\"ctrl+shift+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"ctrl+shift+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"ctrl+alt+up\"], \"command\": \"scroll_lines\", \"args\": {\"amount\": 1.0} },\n	{ \"keys\": [\"ctrl+alt+down\"], \"command\": \"scroll_lines\", \"args\": {\"amount\": -1.0} },\n\n	{ \"keys\": [\"ctrl+shift+up\"], \"command\": \"select_lines\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"ctrl+shift+down\"], \"command\": \"select_lines\", \"args\": {\"forward\": true} },\n\n	{ \"keys\": [\"super+shift+[\"], \"command\": \"prev_view\" },\n	{ \"keys\": [\"super+shift+]\"], \"command\": \"next_view\" },\n	{ \"keys\": [\"super+alt+left\"], \"command\": \"prev_view\" },\n	{ \"keys\": [\"super+alt+right\"], \"command\": \"next_view\" },\n\n	{ \"keys\": [\"ctrl+tab\"], \"command\": \"next_view_in_stack\" },\n	{ \"keys\": [\"ctrl+shift+tab\"], \"command\": \"prev_view_in_stack\" },\n\n	{ \"keys\": [\"super+a\"], \"command\": \"select_all\" },\n	{ \"keys\": [\"super+shift+l\"], \"command\": \"split_selection_into_lines\" },\n	{ \"keys\": [\"escape\"], \"command\": \"single_selection\", \"context\":\n		[\n			{ \"key\": \"num_selections\", \"operator\": \"not_equal\", \"operand\": 1 }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"clear_fields\", \"context\":\n		[\n			{ \"key\": \"has_next_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"clear_fields\", \"context\":\n		[\n			{ \"key\": \"has_prev_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_panel\", \"args\": {\"cancel\": true},\n		\"context\":\n		[\n			{ \"key\": \"panel_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_overlay\", \"context\":\n		[\n			{ \"key\": \"overlay_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_popup\", \"context\":\n		[\n			{ \"key\": \"popup_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_auto_complete\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"super+]\"], \"command\": \"indent\" },\n	{ \"keys\": [\"super+[\"], \"command\": \"unindent\" },\n\n	{ \"keys\": [\"tab\"], \"command\": \"insert_best_completion\", \"args\": {\"default\": \"\\t\", \"exact\": true} },\n	{ \"keys\": [\"tab\"], \"command\": \"insert_best_completion\", \"args\": {\"default\": \"\\t\", \"exact\": false},\n		\"context\":\n		[\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"not_regex_match\", \"operand\": \".*\\\\b[0-9]+$\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"replace_completion_with_next_completion\", \"context\":\n		[\n			{ \"key\": \"last_command\", \"operator\": \"equal\", \"operand\": \"insert_best_completion\" },\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"reindent\", \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"indent\", \"context\":\n		[\n			{ \"key\": \"text\", \"operator\": \"regex_contains\", \"operand\": \"\\n\" }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"next_field\", \"context\":\n		[\n			{ \"key\": \"has_next_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"commit_completion\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\" },\n			{ \"key\": \"setting.auto_complete_commit_on_tab\" }\n		]\n	},\n\n	{ \"keys\": [\"shift+tab\"], \"command\": \"insert\", \"args\": {\"characters\": \"\\t\"} },\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"setting.shift_tab_unindent\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \"^[\\t ]*\" }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"text\", \"operator\": \"regex_contains\", \"operand\": \"\\n\" }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"prev_field\", \"context\":\n		[\n			{ \"key\": \"has_prev_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"super+l\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"line\"} },\n	{ \"keys\": [\"super+d\"], \"command\": \"find_under_expand\" },\n	{ \"keys\": [\"super+k\", \"super+d\"], \"command\": \"find_under_expand_skip\" },\n	{ \"keys\": [\"super+shift+space\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"scope\"} },\n	{ \"keys\": [\"ctrl+shift+m\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"brackets\"} },\n	{ \"keys\": [\"ctrl+m\"], \"command\": \"move_to\", \"args\": {\"to\": \"brackets\"} },\n	{ \"keys\": [\"super+shift+j\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"indentation\"} },\n	{ \"keys\": [\"super+shift+a\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"tag\"} },\n\n	{ \"keys\": [\"super+alt+.\"], \"command\": \"close_tag\" },\n\n	{ \"keys\": [\"ctrl+q\"], \"command\": \"toggle_record_macro\" },\n	{ \"keys\": [\"ctrl+shift+q\"], \"command\": \"run_macro\" },\n\n	{ \"keys\": [\"super+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line.sublime-macro\"} },\n	{ \"keys\": [\"super+shift+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line Before.sublime-macro\"} },\n	{ \"keys\": [\"enter\"], \"command\": \"commit_completion\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\" },\n			{ \"key\": \"setting.auto_complete_commit_on_tab\", \"operand\": false }\n		]\n	},\n\n	{ \"keys\": [\"super+t\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"show_files\": true} },\n	{ \"keys\": [\"super+p\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"show_files\": true} },\n	{ \"keys\": [\"super+shift+p\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"command_palette\"} },\n	{ \"keys\": [\"super+ctrl+p\"], \"command\": \"prompt_select_workspace\" },\n	{ \"keys\": [\"super+r\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"text\": \"@\"} },\n	{ \"keys\": [\"ctrl+g\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"text\": \":\"} },\n	{ \"keys\": [\"f12\"], \"command\": \"goto_definition\" },\n	{ \"keys\": [\"super+alt+down\"], \"command\": \"goto_definition\" },\n	{ \"keys\": [\"super+shift+r\"], \"command\": \"goto_symbol_in_project\" },\n	{ \"keys\": [\"ctrl+minus\"], \"command\": \"jump_back\" },\n	{ \"keys\": [\"ctrl+shift+minus\"], \"command\": \"jump_forward\" },\n\n	{ \"keys\": [\"super+i\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"incremental_find\", \"reverse\": false} },\n	{ \"keys\": [\"super+shift+i\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"incremental_find\", \"reverse\": true} },\n	{ \"keys\": [\"super+f\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"find\", \"reverse\": false} },\n	{ \"keys\": [\"super+alt+f\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"replace\", \"reverse\": false} },\n	{ \"keys\": [\"super+alt+e\"], \"command\": \"replace_next\" },\n	{ \"keys\": [\"super+g\"], \"command\": \"find_next\" },\n	{ \"keys\": [\"super+shift+g\"], \"command\": \"find_prev\" },\n	{ \"keys\": [\"super+e\"], \"command\": \"slurp_find_string\" },\n	{ \"keys\": [\"super+shift+e\"], \"command\": \"slurp_replace_string\" },\n\n	{ \"keys\": [\"alt+super+g\"], \"command\": \"find_under\" },\n	{ \"keys\": [\"shift+alt+super+g\"], \"command\": \"find_under_prev\" },\n	{ \"keys\": [\"ctrl+super+g\"], \"command\": \"find_all_under\" },\n\n	{ \"keys\": [\"super+shift+f\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"find_in_files\"} },\n	{ \"keys\": [\"f4\"], \"command\": \"next_result\" },\n	{ \"keys\": [\"shift+f4\"], \"command\": \"prev_result\" },\n\n	{ \"keys\": [\"f6\"], \"command\": \"toggle_setting\", \"args\": {\"setting\": \"spell_check\"} },\n	{ \"keys\": [\"ctrl+f6\"], \"command\": \"next_misspelling\" },\n	{ \"keys\": [\"ctrl+shift+f6\"], \"command\": \"prev_misspelling\" },\n\n	{ \"keys\": [\"ctrl+super+up\"], \"command\": \"swap_line_up\" },\n	{ \"keys\": [\"ctrl+super+down\"], \"command\": \"swap_line_down\" },\n\n	{ \"keys\": [\"ctrl+backspace\"], \"command\": \"delete_word\", \"args\": { \"forward\": false, \"sub_words\": true } },\n	{ \"keys\": [\"ctrl+delete\"], \"command\": \"delete_word\", \"args\": { \"forward\": true, \"sub_words\": true } },\n\n	{ \"keys\": [\"super+forward_slash\"], \"command\": \"toggle_comment\", \"args\": { \"block\": false } },\n	{ \"keys\": [\"super+alt+forward_slash\"], \"command\": \"toggle_comment\", \"args\": { \"block\": true } },\n\n	{ \"keys\": [\"super+j\"], \"command\": \"join_lines\" },\n	{ \"keys\": [\"super+shift+d\"], \"command\": \"duplicate_line\" },\n\n	{ \"keys\": [\"ctrl+backquote\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"console\", \"toggle\": true} },\n\n	{ \"keys\": [\"ctrl+space\"], \"command\": \"auto_complete\" },\n	{ \"keys\": [\"ctrl+space\"], \"command\": \"replace_completion_with_auto_complete\", \"context\":\n		[\n			{ \"key\": \"last_command\", \"operator\": \"equal\", \"operand\": \"insert_best_completion\" },\n			{ \"key\": \"auto_complete_visible\", \"operator\": \"equal\", \"operand\": false },\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"super+alt+p\"], \"command\": \"show_scope_name\" },\n	{ \"keys\": [\"ctrl+shift+p\"], \"command\": \"show_scope_name\" },\n\n	{ \"keys\": [\"f7\"], \"command\": \"build\" },\n	{ \"keys\": [\"super+b\"], \"command\": \"build\" },\n	{ \"keys\": [\"super+shift+b\"], \"command\": \"build\", \"args\": {\"select\": true} },\n\n	{ \"keys\": [\"ctrl+c\"], \"command\": \"exec\", \"args\": {\"kill\": true} },\n\n	{ \"keys\": [\"ctrl+t\"], \"command\": \"transpose\" },\n\n	{ \"keys\": [\"f5\"], \"command\": \"sort_lines\", \"args\": {\"case_sensitive\": false} },\n	{ \"keys\": [\"ctrl+f5\"], \"command\": \"sort_lines\", \"args\": {\"case_sensitive\": true} },\n\n	// Auto-pair quotes\n	{ \"keys\": [\"\\\"\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\\"$0\\\"\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|>|$)\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"not_regex_contains\", \"operand\": \"[\\\"a-zA-Z0-9_]$\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"\\\"\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\\"${0:$SELECTION}\\\"\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"\\\"\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\"\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\"$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\"\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n\n	// Auto-pair single quotes\n	{ \"keys\": [\"'\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"'$0'\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|>|$)\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"not_regex_contains\", \"operand\": \"['a-zA-Z0-9_]$\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"'\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"'${0:$SELECTION}'\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"'\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^'\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"'$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^'\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n\n	// Auto-pair brackets\n	{ \"keys\": [\"(\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"($0)\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|;|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"(\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"(${0:$SELECTION})\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\")\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\($\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\)\", \"match_all\": true }\n		]\n	},\n\n	// Auto-pair square brackets\n	{ \"keys\": [\"[\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"[$0]\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|;|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"[\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"[${0:$SELECTION}]\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"]\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\]\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\[$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\]\", \"match_all\": true }\n		]\n	},\n\n	// Auto-pair curly brackets\n	{ \"keys\": [\"{\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"{$0}\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"{\"], \"command\": \"wrap_block\", \"args\": {\"begin\": \"{\", \"end\": \"}\"}, \"context\":\n		[\n			{ \"key\": \"indented_block\", \"match_all\": true },\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"{\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"{${0:$SELECTION}}\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"}\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n\n	{ \"keys\": [\"enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line in Braces.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line in Braces.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n\n	{ \"keys\": [\"enter\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\n\\t$0\\n\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"meta.scope.between-tag-pair\", \"match_all\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\n\\t$0\\n\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"meta.scope.between-tag-pair\", \"match_all\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n		]\n	},\n\n	{\n		\"keys\": [\"super+alt+1\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+2\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.5, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+3\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.33, 0.66, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+4\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.25, 0.5, 0.75, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+shift+2\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 0.5, 1.0],\n			\"cells\": [[0, 0, 1, 1], [0, 1, 1, 2]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+shift+3\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 0.33, 0.66, 1.0],\n			\"cells\": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]\n		}\n	},\n	{\n		\"keys\": [\"super+alt+5\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.5, 1.0],\n			\"rows\": [0.0, 0.5, 1.0],\n			\"cells\":\n			[\n				[0, 0, 1, 1], [1, 0, 2, 1],\n				[0, 1, 1, 2], [1, 1, 2, 2]\n			]\n		}\n	},\n	{ \"keys\": [\"ctrl+1\"], \"command\": \"focus_group\", \"args\": { \"group\": 0 } },\n	{ \"keys\": [\"ctrl+2\"], \"command\": \"focus_group\", \"args\": { \"group\": 1 } },\n	{ \"keys\": [\"ctrl+3\"], \"command\": \"focus_group\", \"args\": { \"group\": 2 } },\n	{ \"keys\": [\"ctrl+4\"], \"command\": \"focus_group\", \"args\": { \"group\": 3 } },\n	{ \"keys\": [\"ctrl+5\"], \"command\": \"focus_group\", \"args\": { \"group\": 4 } },\n	{ \"keys\": [\"ctrl+6\"], \"command\": \"focus_group\", \"args\": { \"group\": 5 } },\n	{ \"keys\": [\"ctrl+7\"], \"command\": \"focus_group\", \"args\": { \"group\": 6 } },\n	{ \"keys\": [\"ctrl+8\"], \"command\": \"focus_group\", \"args\": { \"group\": 7 } },\n	{ \"keys\": [\"ctrl+9\"], \"command\": \"focus_group\", \"args\": { \"group\": 8 } },\n	{ \"keys\": [\"ctrl+shift+1\"], \"command\": \"move_to_group\", \"args\": { \"group\": 0 } },\n	{ \"keys\": [\"ctrl+shift+2\"], \"command\": \"move_to_group\", \"args\": { \"group\": 1 } },\n	{ \"keys\": [\"ctrl+shift+3\"], \"command\": \"move_to_group\", \"args\": { \"group\": 2 } },\n	{ \"keys\": [\"ctrl+shift+4\"], \"command\": \"move_to_group\", \"args\": { \"group\": 3 } },\n	{ \"keys\": [\"ctrl+shift+5\"], \"command\": \"move_to_group\", \"args\": { \"group\": 4 } },\n	{ \"keys\": [\"ctrl+shift+6\"], \"command\": \"move_to_group\", \"args\": { \"group\": 5 } },\n	{ \"keys\": [\"ctrl+shift+7\"], \"command\": \"move_to_group\", \"args\": { \"group\": 6 } },\n	{ \"keys\": [\"ctrl+shift+8\"], \"command\": \"move_to_group\", \"args\": { \"group\": 7 } },\n	{ \"keys\": [\"ctrl+shift+9\"], \"command\": \"move_to_group\", \"args\": { \"group\": 8 } },\n	{ \"keys\": [\"ctrl+0\"], \"command\": \"focus_side_bar\" },\n\n	{ \"keys\": [\"super+k\", \"super+up\"], \"command\": \"new_pane\" },\n	{ \"keys\": [\"super+k\", \"super+shift+up\"], \"command\": \"new_pane\", \"args\": {\"move\": false} },\n	{ \"keys\": [\"super+k\", \"super+down\"], \"command\": \"close_pane\" },\n	{ \"keys\": [\"super+k\", \"super+left\"], \"command\": \"focus_neighboring_group\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"super+k\", \"super+right\"], \"command\": \"focus_neighboring_group\" },\n	{ \"keys\": [\"super+k\", \"super+shift+left\"], \"command\": \"move_to_neighboring_group\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"super+k\", \"super+shift+right\"], \"command\": \"move_to_neighboring_group\" },\n\n	{ \"keys\": [\"super+1\"], \"command\": \"select_by_index\", \"args\": { \"index\": 0 } },\n	{ \"keys\": [\"super+2\"], \"command\": \"select_by_index\", \"args\": { \"index\": 1 } },\n	{ \"keys\": [\"super+3\"], \"command\": \"select_by_index\", \"args\": { \"index\": 2 } },\n	{ \"keys\": [\"super+4\"], \"command\": \"select_by_index\", \"args\": { \"index\": 3 } },\n	{ \"keys\": [\"super+5\"], \"command\": \"select_by_index\", \"args\": { \"index\": 4 } },\n	{ \"keys\": [\"super+6\"], \"command\": \"select_by_index\", \"args\": { \"index\": 5 } },\n	{ \"keys\": [\"super+7\"], \"command\": \"select_by_index\", \"args\": { \"index\": 6 } },\n	{ \"keys\": [\"super+8\"], \"command\": \"select_by_index\", \"args\": { \"index\": 7 } },\n	{ \"keys\": [\"super+9\"], \"command\": \"select_by_index\", \"args\": { \"index\": 8 } },\n	{ \"keys\": [\"super+0\"], \"command\": \"select_by_index\", \"args\": { \"index\": 9 } },\n\n	{ \"keys\": [\"f2\"], \"command\": \"next_bookmark\" },\n	{ \"keys\": [\"shift+f2\"], \"command\": \"prev_bookmark\" },\n	{ \"keys\": [\"super+f2\"], \"command\": \"toggle_bookmark\" },\n	{ \"keys\": [\"super+shift+f2\"], \"command\": \"clear_bookmarks\" },\n	{ \"keys\": [\"alt+f2\"], \"command\": \"select_all_bookmarks\" },\n\n	{ \"keys\": [\"super+k\", \"super+u\"], \"command\": \"upper_case\" },\n	{ \"keys\": [\"super+k\", \"super+l\"], \"command\": \"lower_case\" },\n	{ \"keys\": [\"super+k\", \"super+space\"], \"command\": \"set_mark\" },\n	{ \"keys\": [\"super+k\", \"super+a\"], \"command\": \"select_to_mark\" },\n	{ \"keys\": [\"super+k\", \"super+w\"], \"command\": \"delete_to_mark\" },\n	{ \"keys\": [\"super+k\", \"super+x\"], \"command\": \"swap_with_mark\" },\n	{ \"keys\": [\"super+k\", \"super+g\"], \"command\": \"clear_bookmarks\", \"args\": {\"name\": \"mark\"} },\n\n	{ \"keys\": [\"super+equals\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"super+plus\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"super+minus\"], \"command\": \"decrease_font_size\" },\n\n	{ \"keys\": [\"ctrl+shift+w\"], \"command\": \"insert_snippet\", \"args\": { \"name\": \"Packages/XML/long-tag.sublime-snippet\" } },\n\n	{ \"keys\": [\"ctrl+shift+k\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Line.sublime-macro\"} },\n\n	{ \"keys\": [\"super+alt+q\"], \"command\": \"wrap_lines\" },\n\n	{ \"keys\": [\"super+alt+[\"], \"command\": \"fold\" },\n	{ \"keys\": [\"super+alt+]\"], \"command\": \"unfold\" },\n	{ \"keys\": [\"super+k\", \"super+1\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 1} },\n	{ \"keys\": [\"super+k\", \"super+2\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 2} },\n	{ \"keys\": [\"super+k\", \"super+3\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 3} },\n	{ \"keys\": [\"super+k\", \"super+4\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 4} },\n	{ \"keys\": [\"super+k\", \"super+5\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 5} },\n	{ \"keys\": [\"super+k\", \"super+6\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 6} },\n	{ \"keys\": [\"super+k\", \"super+7\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 7} },\n	{ \"keys\": [\"super+k\", \"super+8\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 8} },\n	{ \"keys\": [\"super+k\", \"super+9\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 9} },\n	{ \"keys\": [\"super+k\", \"super+0\"], \"command\": \"unfold_all\" },\n	{ \"keys\": [\"super+k\", \"super+j\"], \"command\": \"unfold_all\" },\n	{ \"keys\": [\"super+k\", \"super+t\"], \"command\": \"fold_tag_attributes\" },\n\n	{ \"keys\": [\"super+alt+o\"], \"command\": \"toggle_overwrite\" },\n\n	{ \"keys\": [\"alt+f2\"], \"command\": \"context_menu\" },\n\n	{ \"keys\": [\"super+alt+c\"], \"command\": \"toggle_case_sensitive\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"super+alt+r\"], \"command\": \"toggle_regex\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"super+alt+w\"], \"command\": \"toggle_whole_word\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"super+alt+a\"], \"command\": \"toggle_preserve_case\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	// Find panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"find_next\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		 \"context\": [{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	// Replace panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"find_next\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		\"context\": [{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"ctrl+alt+enter\"], \"command\": \"replace_all\", \"args\": {\"close_panel\": true},\n		 \"context\": [{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	// Incremental find panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"hide_panel\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		\"context\": [{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	{ \"keys\": [\"super+,\"], \"command\": \"open_file\", \"args\": {\"file\": \"${packages}/User/Preferences.sublime-settings\"} },\n\n	{ \"keys\": [\"super+k\", \"super+y\"], \"command\": \"yank\" },\n	{ \"keys\": [\"super+k\", \"super+k\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard EOL.sublime-macro\"} },\n	{ \"keys\": [\"super+k\", \"super+backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard BOL.sublime-macro\"} },\n	{ \"keys\": [\"super+k\", \"super+c\"], \"command\": \"show_at_center\" },\n\n	// These are OS X built in commands, and don't need to be listed here, but\n	// doing so lets them show up in the menu\n	{ \"keys\": [\"ctrl+y\"], \"command\": \"yank\" },\n	{ \"keys\": [\"super+backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard BOL.sublime-macro\"} },\n	// super+delete isn't a built in command, but makes sense anyway\n	{ \"keys\": [\"super+delete\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard EOL.sublime-macro\"} },\n	{ \"keys\": [\"ctrl+k\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard EOL.sublime-macro\"} },\n	{ \"keys\": [\"ctrl+l\"], \"command\": \"show_at_center\" },\n	{ \"keys\": [\"ctrl+o\"], \"command\": \"insert_snippet\", \"args\": { \"contents\": \"$0\\n\" } },\n	{ \"keys\": [\"ctrl+super+d\"], \"command\": \"noop\" },\n	{ \"keys\": [\"ctrl+super+shift+d\"], \"command\": \"noop\" },\n\n	// HTML, XML close tag\n	{ \"keys\": [\"/\"], \"command\": \"close_tag\", \"args\": { \"insert_slash\": true }, \"context\":\n		[\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"(text.html, text.xml) - string - comment\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \".*<$\", \"match_all\": true },\n			{ \"key\": \"setting.auto_close_tags\" }\n		]\n	}\n]\n",
+					"file": "/Users/benbarnett/Sites/common/SublimeText3/Packages/Default/Default (OSX).sublime-keymap",
+					"file_size": -1,
+					"file_write_time": -1,
+					"settings":
+					{
+						"buffer_size": 34338,
+						"line_ending": "Unix",
+						"read_only": true,
+						"scratch": true
+					}
+				},
+				{
+					"contents": "// sass library provided by alphagov/govuk_frontend_toolkit\n@import \"govuk-frontend-toolkit\";\n\n// styles provided by alphagov/govuk_elements\n@import \"govuk-elements\";\n\n// service specific styles\n@import \"lib/*\";\n@import \"base/*\";\n@import \"helpers/*\";\n@import \"layout/**/*\";\n@import \"components/**/*\";\n\n.home-intro,\n.home-scope {\n  @include core-24;\n  color: $color-homepage-grey-text;\n}\n\n.home-scope {\n  margin-top: 28px;\n}\n\n.home-intro {\n  margin-top: 20px;\n}\n",
+					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/pensions-guidance.scss",
+					"file_size": 461,
+					"file_write_time": 130979385020000000,
+					"settings":
+					{
+						"buffer_size": 461,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "Package Control Messages\n========================\n\nEmmet\n-----\n\n  Thank you for installing Emmet -- a toolkit that can greatly improve your workflow. Note that this plugin automatically downloads and installs PyV8 binary (see status bar message). \n  \n  ******************************\n  Please restart editor \n  to finish installation process \n  after PyV8 was downloaded.\n  ******************************\n  \n  Tab key handler\n  ==========================\n  \n  By default, Emmet allows you to expand abbreviations with Tab key in HTML, XML, HAML and CSS/SASS/LESS/Stylus documents. As a side effect, you can’t use some of your ST2 snippets.\n  \n  Please read https://github.com/sergeche/emmet-sublime#tab-key-handler about how Tab handler works and how to tweak its behavior to match your needs.\n  \n  Enter key\n  ==========================\n  \n  In HTML and XML documents, Emmet overrides Enter key to insert formatted line breaks between opening and closing tags. In some cases it will break character input (for example, in Japanese language).\n  \n  To disable Enter key handler, simply add the following option in your user's Preferences file:\n  \n  \"disable_formatted_linebreak\": true\n  \n  Actions shortcuts\n  ==========================\n  \n  Emmet has a number of actions with keyboard shortcuts that may override ones you're using commonly (for example, Ctrl-E or Ctrl-Down). Please read the project main page to get list of available actions and keyboard shortcuts and how to disable them:\n  https://github.com/sergeche/emmet-sublime\n  \n  Documentation and examples:\n  http://emmet.io\n  \n  ------------------------------\n  Follow me on Twitter: @emmetio\n  ------------------------------\n",
+					"settings":
+					{
+						"buffer_size": 1688,
+						"line_ending": "Unix",
+						"name": "Package Control Messages",
+						"read_only": true,
+						"scratch": true
+					}
+				},
+				{
+					"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
+					"settings":
+					{
+						"buffer_size": 1266,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/Users/benbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 564,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 354.0,
+				"last_filter": "packa",
+				"selected_items":
+				[
+					[
+						"packa",
+						"Package Control: Install Package"
+					],
+					[
+						"markd",
+						"Markdown Preview: Preview in Browser"
+					],
+					[
+						"rmove",
+						"Package Control: Remove Package"
+					],
+					[
+						"reload",
+						"git: restore file assumed unchanged"
+					],
+					[
+						"git chec",
+						"git: checkout current file"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"delete",
+						"File: Delete"
+					],
+					[
+						"branch",
+						"git: graph all branches"
+					],
+					[
+						"delet",
+						"File: Delete"
+					],
+					[
+						"dele",
+						"File: Delete"
+					],
+					[
+						"del",
+						"File: Delete"
+					],
+					[
+						"install p",
+						"Package Control: Install Package"
+					],
+					[
+						"git checkout ",
+						"git: checkout"
+					],
+					[
+						"gitb",
+						"git: branch"
+					],
+					[
+						"git bran",
+						"git: branch"
+					],
+					[
+						"git checkout",
+						"git: checkout"
+					],
+					[
+						"checkout",
+						"git: checkout current file"
+					],
+					[
+						"delte",
+						"File: Delete"
+					],
+					[
+						"move",
+						"File: Move"
+					],
+					[
+						"rename",
+						"File: Rename"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"pret",
+						"HTMLPrettify"
+					],
+					[
+						"diffy",
+						"Diffy Compare"
+					],
+					[
+						"diff",
+						"git: diff current file inline"
+					],
+					[
+						"gherkin",
+						"Gherkin/Cucumber: Format"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"gitsa",
+						"git: status"
+					],
+					[
+						"show",
+						"GitGutter: Show Comparing Against"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"less",
+						"Set Syntax: LESS"
+					],
+					[
+						"java",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"js",
+						"Set Syntax: JavaScript"
+					]
+				],
+				"width": 530.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/Users/benbarnett/Sites/pw/pension_guidance",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets"
+			],
+			"file_history":
+			[
+				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Google Drive/Clients/Pension Wise/Docs/Pulling summary document information.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/lib/leave_pot_untouched_calculator.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/application.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures/calculator.html",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/calculatorSpec.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/pensions-guidance-print.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/govuk/public/stylesheets/govuk-template-print.css",
+				"/Users/benbarnett/Sites/pw/pension_guidance/package.json",
+				"/Users/benbarnett/Sites/pw/pension_guidance/.jshintrc",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/helpers/application_helper.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/config/locales/en.yml",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_estimate.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/features/step_definitions/calculator_steps.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/take_whole_pot/_estimate.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_result.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/_form_input_currency.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/helpers/navigation_helper.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/Rakefile",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/view_models/navigation.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/leave_pot_untouched/_form.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/view_models/navigation_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/domain/taxonomy.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/components/_page_nav.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/components/_nav.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout/_nav.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_nav.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/features/take_whole_pot_calculator_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/calculators/take_whole_pot_controller.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/forms/calculators/leave_pot_untouched_form.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/lib/take_whole_pot_calculator_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/features/take_whole_pot_calculator_analytics_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/features/leave_pot_untouched_analytics_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/services/create_category_navigation.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/config/initializers/govspeak.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/spec_helper.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/support/helpers/wait_for_ajax.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout/page/_category.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/Gemfile",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/take_whole_pot_calculator/_results.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/take_whole_pot.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/_form_input_submit.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/take_whole_pot/show.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/take_whole_pot/_calculator.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/take_whole_pot/_result.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/log/development.log",
+				"/Users/benbarnett/Sites/pw/pension_guidance/log/test.log",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/helpers/application_helper_spec.rb",
+				"/usr/local/lib/prince/license/license.dat",
+				"/Users/benbarnett/Sites/pw/pension_guidance/lib/search/google_custom_search_engine.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/config/initializers/search.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/styleguide/pages/search_results.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers/_heading-search-results.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_search-global.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/.git/MERGE_MSG",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/helpers/guides_helper.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/features/guides.feature",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/take_cash_in_chunks.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/guides_controller.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/6_steps_you_need_to_take.html",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/adjustable_income.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/already_bought_annuity.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/appointments.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/benefits.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/book.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/mix_options.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/guaranteed_income.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/leave_pot_untouched.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/decorators/guide_decorator.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/models/guide.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/repositories/guide_repository_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/decorators/guide_decorator_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/decorators/shared_examples_for_a_guide_decorator.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/models/guide_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/guides/option.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/lib/_variables.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_next-steps.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/take_whole_pot_calculator/show.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/README.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/domain/breadcrumb.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/components/_footer_categories.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/fixtures/the_test_govspeak_guide.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/fixtures/the_test_html_guide.html",
+				"/Users/benbarnett/Sites/pw/pension_guidance/features/step_definitions/guide_steps.rb",
+				"/Users/benbarnett/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.2/lib/active_support/callbacks.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/routing/guide_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/scams.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/care_costs.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/when_you_die.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/tax.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/pension_types.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/pension_pot_options.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/guides/show.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/lib/tasks/analyse_javascript.rake",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/repositories/guide_repository.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/features/pages/guide_page.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/content/pension_pot_value.md",
+				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/govuk/public/sass/_grid_layout.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/govuk/public/sass/_conditionals.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout/_grid.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/bower.json",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/layout/_common_page_structure.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/_two_column.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/govuk/public/sass/_typography.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/lib/front_matter_parser.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/controllers/guides_controller_spec.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_sticky-sidebar.scss",
+				"/Users/benbarnett/Sites/gds/govspeak/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/pw/pdf_output/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/pw/pdf_output/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/pw/output-templates/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/affix.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/config/initializers/assets.rb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/helpers/_visually-hidden.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/mobile-nav-toggler.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/styleguide.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_elements/govuk/public/sass/_measurements.scss",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/click-event-loggerSpec.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/fixtures/mobile-nav-toggler.html",
+				"/Users/benbarnett/Sites/pw/pension_guidance/spec/javascripts/mobile-nav-togglerSpec.js",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/full_width.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/pages.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/styleguide/pages/homepage.html.erb",
+				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/layouts/styleguide/search_header.html.erb"
+			],
+			"find":
+			{
+				"height": 70.0
+			},
+			"find_in_files":
+			{
+				"height": 95.0,
+				"where_history":
+				[
+					"*.scss",
+					"/Users/benbarnett/Sites/pw/pension_guidance/",
+					"/Users/benbarnett/Sites/pw/pension_guidance/content",
+					"*.md",
+					"*",
+					"*.scss",
+					"*",
+					"*.scss",
+					"*.erb",
+					"*.md",
+					"*.erb",
+					"*.scss",
+					"*.erb",
+					"*.rb",
+					"*.md",
+					"*.erb",
+					"*.scss",
+					"*",
+					"*.scss",
+					"*",
+					"*.scss",
+					"*",
+					"*.scss",
+					"*.js",
+					"*.scss",
+					"*.yml",
+					"*",
+					"*.scss"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"super",
+					"skip",
+					"this",
+					"      if (this.experiment) {\n",
+					"window",
+					"\n",
+					"yellow-fade",
+					"in",
+					"2s",
+					"yellow",
+					"request",
+					"16",
+					"keyup",
+					"scroll ",
+					"scroll",
+					"nearestTen",
+					"<%= nearestTen %>",
+					"contribution",
+					"1",
+					"10",
+					"Try with another ",
+					"50",
+					"10",
+					"button",
+					"page",
+					"£",
+					"5",
+					"h2",
+					"h1",
+					"button",
+					"label",
+					".block-label",
+					"button",
+					".init",
+					"format_currency",
+					"precision",
+					"3",
+					", precision: 0",
+					".",
+					"format_currency",
+					"number_to_currency",
+					"format_currency",
+					"CalculatorResult",
+					"bar_guide",
+					"baz_guide",
+					"category",
+					"grouped",
+					"in-article",
+					"in-acticle",
+					"section",
+					"guide",
+					"nigel",
+					"guides",
+					"has_children",
+					"this.$submitButton = this.$calculator.find('.js-calculate-submit');\n      this.$results = this.$calculator.find('.js-calculator-result');\n      this.$loadingStatus = $('<span class=\"calculator__loading-status\">Please wait...</span>').\n                           insertAfter(this.$submitButton);",
+					"_initDOM",
+					"this.$calculator",
+					"calculator--in-article",
+					"fakeAJAXSubmissions",
+					"scrollPromise",
+					"then",
+					"options",
+					"success",
+					"andCallFake",
+					"spyOn($, 'ajax').and.returnValue($.Deferred());",
+					"updateResults",
+					"handleResults",
+					"global",
+					"jscs",
+					"poltergeist",
+					"wait_for_ajax",
+					"dataLayer",
+					"Capybara",
+					"submitForm",
+					".then",
+					"this.toggleLoading",
+					"$calculator",
+					"var ",
+					"$loadingStatus, ",
+					"var",
+					"calculator--in-article",
+					"search",
+					"t-sticky-sidebar",
+					"sticky-sidebar",
+					"sticky_sidebar_",
+					"sidebar_",
+					"sticky_",
+					"- pension_option",
+					"- booking_form",
+					"tags",
+					"tags.include",
+					"- booking",
+					"'",
+					"- non_journey",
+					"- non",
+					"- journey",
+					"attribute",
+					"I visit the pension-pot-options guide",
+					"journey_nav_steps",
+					"tag? '",
+					"tag?",
+					"pick",
+					"s",
+					"markdown",
+					" %w(",
+					"%w(te",
+					"tags",
+					"%w('testing', 'tags')",
+					"['testing', 'tags']",
+					"\"testing\", \"tags\"",
+					"'testing', 'tags'",
+					"%w",
+					"object",
+					"set_bread",
+					"fail ",
+					"description",
+					"1020",
+					"1020px",
+					"641",
+					"grid-column",
+					"l-column-third",
+					"bold-19",
+					"mix-options",
+					"supplementary_ill_health",
+					"theme_large",
+					"variant_large",
+					"supplementary_benefits",
+					"width: 300px;"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"number_to_currency",
+					"CalculatorEstimate",
+					"- option",
+					"- booking",
+					"navigation-full-width",
+					"navigation-background",
+					"footer-one-column",
+					"footer-two-column",
+					"<%= render 'components/page_nav' %>"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/Users/benbarnett/Sites/pw/pension_guidance"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 3,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5909,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										419,
+										419
+									]
+								],
+								"settings":
+								{
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/javascripts/calculators.js",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
+									"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 1.0,
+								"translation.y": 36.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/Users/benbarnett/Sites/common/SublimeText3/Packages/Default/Default (OSX).sublime-keymap",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 34338,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										6678,
+										6745
+									],
+									[
+										6759,
+										6803
+									],
+									[
+										6817,
+										6877
+									]
+								],
+								"settings":
+								{
+									"git_savvy.file_path": "/Users/benbarnett/Sites/common/SublimeText3/Packages/Default/Default (OSX).sublime-keymap",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
+									"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 3443.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/pensions-guidance.scss",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 461,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										229,
+										229
+									]
+								],
+								"settings":
+								{
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/pensions-guidance.scss",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
+									"syntax": "Packages/SCSS/SCSS.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1688,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										300,
+										300
+									]
+								],
+								"settings":
+								{
+									"auto_indent": false,
+									"default_dir": "/Users/benbarnett/Sites/pw/pension_guidance",
+									"git_savvy.file_path": null,
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_width": 2,
+									"word_wrap": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 514.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1266,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										984,
+										989
+									]
+								],
+								"settings":
+								{
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/pw/pension_guidance/app/assets/stylesheets/components/_calculator.scss",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/pw/pension_guidance",
+									"syntax": "Packages/SCSS/SCSS.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1066.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/Users/benbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 564,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										455,
+										455
+									]
+								],
+								"settings":
+								{
+									"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-Darker-OceanicNext.tmTheme",
+									"git_savvy.file_path": "/Users/benbarnett/Sites/common/SublimeText3/Packages/User/Preferences.sublime-settings",
+									"git_savvy.repo_path": "/Users/benbarnett/Sites/common",
+									"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 30.0
+			},
+			"input":
+			{
+				"height": 37.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.GitSavvy":
+			{
+				"height": 138.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0 0 4 1280 773 0 0 1280 777 ",
+			"project": "",
+			"replace":
+			{
+				"height": 56.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"calcscs",
+						"app/assets/stylesheets/components/_calculator.scss"
+					],
+					[
+						"calc",
+						"app/assets/javascripts/calculators.js"
+					],
+					[
+						"",
+						"lib/leave_pot_untouched_calculator.rb"
+					],
+					[
+						"vari",
+						"app/assets/stylesheets/lib/_variables.scss"
+					],
+					[
+						"appl",
+						"app/helpers/application_helper.rb"
+					],
+					[
+						"applihelpspe",
+						"spec/helpers/application_helper_spec.rb"
+					],
+					[
+						"applhelp",
+						"app/helpers/application_helper.rb"
+					],
+					[
+						"calculatorsteps",
+						"features/step_definitions/calculator_steps.rb"
+					],
+					[
+						"estima",
+						"app/views/calculators/leave_pot_untouched/_estimate.html.erb"
+					],
+					[
+						"estimat",
+						"app/views/calculators/take_whole_pot/_estimate.html.erb"
+					],
+					[
+						"_esti",
+						"app/views/calculators/leave_pot_untouched/_estimate.html.erb"
+					],
+					[
+						"untouchan",
+						"spec/features/leave_pot_untouched_analytics_spec.rb"
+					],
+					[
+						"takewholean",
+						"spec/features/take_whole_pot_calculator_analytics_spec.rb"
+					],
+					[
+						"rake",
+						"Rakefile"
+					],
+					[
+						"navi",
+						"app/helpers/navigation_helper.rb"
+					],
+					[
+						"navigspec",
+						"spec/view_models/navigation_spec.rb"
+					],
+					[
+						"taxon",
+						"app/domain/taxonomy.rb"
+					],
+					[
+						"compon/nav.html",
+						"app/views/components/_nav.html.erb"
+					],
+					[
+						"page_nav",
+						"app/views/components/_page_nav.html.erb"
+					],
+					[
+						"print.css",
+						"vendor/assets/bower_components/govuk_elements/govuk/public/stylesheets/govuk-template-print.css"
+					],
+					[
+						"nav",
+						"app/assets/stylesheets/components/_nav.scss"
+					],
+					[
+						"nav.scs",
+						"app/assets/stylesheets/layout/_nav.scss"
+					],
+					[
+						"forminpu",
+						"app/views/calculators/_form_input_submit.html.erb"
+					],
+					[
+						"takecon",
+						"app/controllers/calculators/take_whole_pot_controller.rb"
+					],
+					[
+						"calcspe",
+						"spec/javascripts/calculatorSpec.js"
+					],
+					[
+						"cal",
+						"app/assets/javascripts/calculators.js"
+					],
+					[
+						"calcul",
+						"app/assets/stylesheets/components/_calculator.scss"
+					],
+					[
+						"spechelp",
+						"spec/spec_helper.rb"
+					],
+					[
+						"takewholeana",
+						"spec/features/take_whole_pot_calculator_analytics_spec.rb"
+					],
+					[
+						"takewhole",
+						"spec/features/take_whole_pot_calculator_spec.rb"
+					],
+					[
+						"take",
+						"content/take_whole_pot.md"
+					],
+					[
+						"appljs",
+						"app/assets/javascripts/application.js"
+					],
+					[
+						"gemf",
+						"Gemfile"
+					],
+					[
+						"pack",
+						"package.json"
+					],
+					[
+						"caspe",
+						"spec/javascripts/calculatorSpec.js"
+					],
+					[
+						"spec_help",
+						"spec/spec_helper.rb"
+					],
+					[
+						"calculat",
+						"spec/javascripts/calculatorSpec.js"
+					],
+					[
+						"results",
+						"app/views/take_whole_pot_calculator/_results.html.erb"
+					],
+					[
+						"takespec",
+						"spec/features/take_whole_pot_calculator_spec.rb"
+					],
+					[
+						"guidecont",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"guidehelp",
+						"~/Sites/pw/pension_guidance/app/helpers/guides_helper.rb"
+					],
+					[
+						"guidescon",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"guidecon",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"two",
+						"app/views/layouts/_two_column.erb"
+					],
+					[
+						"guide",
+						"app/models/guide.rb"
+					],
+					[
+						"guiderepo",
+						"app/repositories/guide_repository.rb"
+					],
+					[
+						"book",
+						"content/book.md"
+					],
+					[
+						"locajourn",
+						"spec/controllers/locations_journey_breadcrumbs_spec.rb"
+					],
+					[
+						"guidecontr",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"guidefea",
+						"features/guides.feature"
+					],
+					[
+						"option",
+						"app/views/guides/option.html.erb"
+					],
+					[
+						"guide_step",
+						"features/step_definitions/guide_steps.rb"
+					],
+					[
+						"guide.rb",
+						"app/models/guide.rb"
+					],
+					[
+						"guidede",
+						"app/decorators/guide_decorator.rb"
+					],
+					[
+						"appoint",
+						"content/appointments.md"
+					],
+					[
+						"care_",
+						"content/care_costs.md"
+					],
+					[
+						"pen",
+						"content/pension_pot_value.md"
+					],
+					[
+						"opt",
+						"app/views/guides/option.html.erb"
+					],
+					[
+						"footer",
+						"app/views/components/_footer_categories.html.erb"
+					],
+					[
+						"guidesteps",
+						"features/step_definitions/guide_steps.rb"
+					],
+					[
+						"repospec",
+						"spec/repositories/guide_repository_spec.rb"
+					],
+					[
+						"the",
+						"spec/fixtures/the_test_html_guide.html"
+					],
+					[
+						"the_test",
+						"spec/fixtures/the_test_govspeak_guide.md"
+					],
+					[
+						"guidespec",
+						"spec/repositories/guide_repository_spec.rb"
+					],
+					[
+						"6_step",
+						"content/6_steps_you_need_to_take.html"
+					],
+					[
+						"guide_steps",
+						"features/step_definitions/guide_steps.rb"
+					],
+					[
+						"scam",
+						"content/scams.md"
+					],
+					[
+						"guidd",
+						"app/decorators/guide_decorator.rb"
+					],
+					[
+						"guidecontrol",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"uguidespe",
+						"spec/routing/guide_spec.rb"
+					],
+					[
+						"giude",
+						"app/decorators/guide_decorator.rb"
+					],
+					[
+						"guidescont",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"guidescnt",
+						"spec/controllers/guides_controller_spec.rb"
+					],
+					[
+						"guideco",
+						"spec/controllers/guides_controller_spec.rb"
+					],
+					[
+						"scams",
+						"content/scams.md"
+					],
+					[
+						"care",
+						"content/care_costs.md"
+					],
+					[
+						"benef",
+						"content/benefits.md"
+					],
+					[
+						"when_you",
+						"content/when_you_die.md"
+					],
+					[
+						"tax",
+						"content/tax.md"
+					],
+					[
+						"pension_types",
+						"content/pension_types.md"
+					],
+					[
+						"pensionpot",
+						"content/pension_pot_options.md"
+					],
+					[
+						"guideshow",
+						"app/views/guides/show.html.erb"
+					],
+					[
+						"frontmat",
+						"lib/front_matter_parser.rb"
+					],
+					[
+						"stick",
+						"app/assets/stylesheets/components/_sticky-sidebar.scss"
+					],
+					[
+						"gem",
+						"Gemfile"
+					],
+					[
+						"op",
+						"app/views/guides/option.html.erb"
+					],
+					[
+						"optio",
+						"app/views/guides/option.html.erb"
+					],
+					[
+						"ta",
+						"content/take_whole_pot.md"
+					],
+					[
+						"bower",
+						"bower.json"
+					],
+					[
+						"grid",
+						"app/assets/stylesheets/layout/_grid.scss"
+					],
+					[
+						"stic",
+						"app/assets/stylesheets/components/_sticky-sidebar.scss"
+					],
+					[
+						"sticky",
+						"app/assets/stylesheets/components/_sticky-sidebar.scss"
+					],
+					[
+						"guidescontr",
+						"app/controllers/guides_controller.rb"
+					],
+					[
+						"brea",
+						"app/domain/breadcrumb.rb"
+					],
+					[
+						"var",
+						"app/assets/stylesheets/lib/_variables.scss"
+					],
+					[
+						"calcula",
+						"app/assets/stylesheets/components/_calculator.scss"
+					],
+					[
+						"read",
+						"README.md"
+					],
+					[
+						"tak",
+						"content/take_whole_pot.md"
+					],
+					[
+						"next",
+						"app/assets/stylesheets/components/_next-steps.scss"
+					],
+					[
+						"varia",
+						"app/assets/stylesheets/lib/_variables.scss"
+					],
+					[
+						"prev",
+						"app/views/appointment_summaries/preview.html.erb"
+					],
+					[
+						"guides",
+						"app/views/guides/show.html.erb"
+					],
+					[
+						"sti",
+						"app/assets/stylesheets/components/_sticky-sidebar.scss"
+					],
+					[
+						"options-over",
+						"app/assets/stylesheets/components/_options-overview.scss"
+					],
+					[
+						"cir",
+						"app/assets/stylesheets/components/_circle.scss"
+					],
+					[
+						"bullet",
+						"app/assets/stylesheets/components/_bullet.scss"
+					],
+					[
+						"scss",
+						".scss-lint.yml"
+					],
+					[
+						"circle",
+						"app/assets/stylesheets/components/_circle.scss"
+					],
+					[
+						"scssli",
+						".scss-lint.yml"
+					],
+					[
+						"layout/nav",
+						"app/assets/stylesheets/layout/_nav.scss"
+					],
+					[
+						"ass",
+						"config/initializers/assets.rb"
+					],
+					[
+						"gov",
+						"app/decorators/govspeak_guide_decorator.rb"
+					],
+					[
+						"option.html",
+						"app/views/guides/option.html.erb"
+					],
+					[
+						"asse",
+						"config/initializers/assets.rb"
+					],
+					[
+						"aff",
+						"app/assets/javascripts/affix.js"
+					],
+					[
+						"assets",
+						"config/initializers/assets.rb"
+					],
+					[
+						"p",
+						"package.json"
+					],
+					[
+						"click",
+						"app/assets/javascripts/click-event-logger.js"
+					],
+					[
+						"gov-uk",
+						"spec/javascripts/fixtures/gov-uk-template.html"
+					],
+					[
+						"clickt",
+						"spec/javascripts/click-trackerSpec.js"
+					],
+					[
+						"mix",
+						"content/mix_options.md"
+					],
+					[
+						"wholepot",
+						"content/take_whole_pot.md"
+					],
+					[
+						"cashin",
+						"content/take_cash_in_chunks.md"
+					],
+					[
+						"gua",
+						"content/guaranteed_income.md"
+					],
+					[
+						"potun",
+						"content/leave_pot_untouched.md"
+					],
+					[
+						"mobile-nav",
+						"spec/javascripts/mobile-nav-togglerSpec.js"
+					],
+					[
+						"layoufull",
+						"app/views/layouts/full_width.erb"
+					],
+					[
+						"full",
+						"app/views/layouts/styleguide/full_width.html.erb"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 301.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 178,
 			"workspace_name": ""
 		}
 	],
