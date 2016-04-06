@@ -7,6 +7,7 @@
 ## SublimeText 3
 
 ```sh
+rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3
 ln -s ~/Sites/common/SublimeText3 ~/Library/Application\ Support/Sublime\ Text\ 3
 ```
 
