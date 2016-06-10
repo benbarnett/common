@@ -19,3 +19,5 @@
   ui = always
 [rebase]
 	autosquash = true
+[core]
+	excludesfile = ~/Sites/common/.gitignore
