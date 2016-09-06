@@ -6,7 +6,9 @@
 	"installed_packages":
 	[
 		"AlignTab",
+		"All Autocomplete",
 		"Better CoffeeScript",
+		"BracketHighlighter",
 		"CoffeeCompile",
 		"Color Highlighter",
 		"Color Scheme - Thunderstorm",
@@ -29,6 +31,7 @@
 		"JSONLint",
 		"LESS",
 		"Markdown Preview",
+		"MarkdownHighlighting",
 		"Material Theme",
 		"Monokai Neue",
 		"Package Control",
