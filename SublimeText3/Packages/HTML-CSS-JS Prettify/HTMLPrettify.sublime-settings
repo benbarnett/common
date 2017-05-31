@@ -5,7 +5,7 @@
   "node_path": {
     "windows": "C:/Program Files/nodejs/node.exe",
     "linux": "/usr/bin/nodejs",
-    "osx": "/usr/local/bin/node"
+    "osx": "/Users/benbarnett/.nvm/versions/node/v7.8.0/bin/node"
   },
 
   // Automatically format when a file is saved.
