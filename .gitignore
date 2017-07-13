@@ -3,3 +3,4 @@
 .atom/compile-cache
 SublimeText3/Backup
 SublimeText3/Cache
+*.cache
