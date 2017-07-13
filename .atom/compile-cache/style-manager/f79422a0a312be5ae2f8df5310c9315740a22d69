@@ -1,1 +1,0 @@
-{"source":"div[data-prettier-match-scope=\"false\"] {\n  display: none;\n}\ndiv[data-prettier-format-on-save=\"enabled\"] {\n  color: #8BC34A;\n}\ndiv[data-prettier-format-on-save=\"enabled\"]::after {\n  content: \" ✓\";\n}\n"}
