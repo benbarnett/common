@@ -1,1 +1,0 @@
-Copy this folder to your {Sublime root}/Packages (usually ~/Library/Application Support/Sublime Text 2/Packages in OSX)
