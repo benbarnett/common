@@ -1,21 +1,30 @@
 {
 	"folder_history":
 	[
-		"/Users/benbarnett/Sites/ft/o-teaser",
-		"/Users/benbarnett/Sites/ft/o-video",
-		"/Users/benbarnett/Sites/ft/n-teaser",
-		"/Users/benbarnett/Sites/ft/next-video-page",
-		"/Users/benbarnett/Sites/ft/next-brightcove-proxy-api",
-		"/Users/benbarnett/Sites/ft/next-video-editor",
-		"/Users/benbarnett/Sites/ft/next-article",
-		"/Users/benbarnett/Sites/ft/next-media-api",
-		"/Users/benbarnett/Sites/ft/n-es-client",
-		"/Users/benbarnett/Sites/ft/o-share",
+		"/Users/benbarnett/Sites/ft/next-brightcove-archive",
 		"/Users/benbarnett/Sites/ft/next-front-page",
+		"/Users/benbarnett/Sites/ft/n-methode",
+		"/Users/benbarnett/Sites/ft/next-video-editor",
+		"/Users/benbarnett/Sites/ft/next-media-api",
+		"/Users/benbarnett/Sites/ft/next-video-page",
+		"/Users/benbarnett/Sites/ft/o-video",
+		"/Users/benbarnett/Sites/ft/next-article",
+		"/Users/benbarnett/Sites/ft/n-email-article",
+		"/Users/benbarnett/Sites/ft/o-share",
+		"/Users/benbarnett/Sites/ft/next-myft-page",
+		"/Users/benbarnett/Sites/ft/n-myft-ui",
+		"/Users/benbarnett/Sites/ft/o-teaser-collection",
+		"/Users/benbarnett/Sites/benbarnett.net",
+		"/Users/benbarnett/Sites/ft/n-zencoder",
+		"/Users/benbarnett/Sites/common",
+		"/Users/benbarnett/Sites/benbarnett.github.com",
+		"/Users/benbarnett/Sites/ft/o-teaser",
+		"/Users/benbarnett/Sites/ft/firefox-captions-test",
+		"/Users/benbarnett/Sites/ft/n-teaser",
+		"/Users/benbarnett/Sites/ft/next-brightcove-proxy-api",
+		"/Users/benbarnett/Sites/ft/n-es-client",
 		"/Users/benbarnett/Sites/ft/n-ui",
 		"/Users/benbarnett/Sites/ft/next-stream-page",
-		"/Users/benbarnett/Sites/benbarnett.github.com",
-		"/Users/benbarnett/Sites/ft/n-methode",
 		"/Users/benbarnett/Sites/ft/next-service-registry",
 		"/Users/benbarnett/Sites/ft/next-config-vars",
 		"/Users/benbarnett/Sites/ft/n-methode/bin",
@@ -32,7 +41,6 @@
 		"/Users/benbarnett/Sites/pw/moj_slotpicker",
 		"/Users/benbarnett/Sites/pw/reporting",
 		"/Users/benbarnett/Sites/pw/booking_locations",
-		"/Users/benbarnett/Sites/common",
 		"/Users/benbarnett/Sites/pw/register_your_interest",
 		"/Users/benbarnett/Sites/test",
 		"/Users/benbarnett/Sites/pw/output-templates",
@@ -86,7 +94,7 @@
 		"/Users/bbarnett/Sites/payday_loans_intervention"
 	],
 	"last_version": 3126,
-	"last_window_id": 573,
+	"last_window_id": 677,
 	"log_indexing": false,
 	"settings":
 	{
@@ -97,6 +105,110 @@
 			{
 				"selected_items":
 				[
+					[
+						"o-teaser",
+						"o-teaser--video"
+					],
+					[
+						"margi",
+						"margin-bottom"
+					],
+					[
+						"method",
+						"methodeUuid"
+					],
+					[
+						"metho",
+						"methodeStory"
+					],
+					[
+						"methode",
+						"methodeStory"
+					],
+					[
+						"return",
+						"returnValue"
+					],
+					[
+						"enco",
+						"encodings"
+					],
+					[
+						"is",
+						"isExclusivelyFLV"
+					],
+					[
+						"enc",
+						"encodings"
+					],
+					[
+						"called",
+						"calledWithExactly\t(methode.spec.js)"
+					],
+					[
+						"video",
+						"videoFilename"
+					],
+					[
+						"new",
+						"newVideo"
+					],
+					[
+						"repb",
+						"republishIfRenamed"
+					],
+					[
+						"sub",
+						"subDirectory"
+					],
+					[
+						"tran",
+						"transcode\t(VideoEncodings.js)"
+					],
+					[
+						"sign",
+						"signS3"
+					],
+					[
+						"larg",
+						"largestSrc"
+					],
+					[
+						"EOM",
+						"EOM::CompoundStory\t(index.js)"
+					],
+					[
+						"getCol",
+						"getColor('claret"
+					],
+					[
+						"z-",
+						"z-index"
+					],
+					[
+						"get",
+						"getPlaylistItem"
+					],
+					[
+						"update",
+						"updateNowPlaying"
+					],
+					[
+						"curren",
+						"currentIndex"
+					],
+					[
+						"playli",
+						"playlist"
+					],
+					[
+						"onVideo",
+						"onVideoPlaying"
+					],
+					[
+						"log",
+						"logError"
+					],
 					[
 						"place",
 						"placeholderInfo\t(video.js)"
@@ -122,10 +234,6 @@
 						"autoplay"
 					],
 					[
-						"video",
-						"videoPlayer"
-					],
-					[
 						"play",
 						"playlistItem"
 					],
@@ -136,10 +244,6 @@
 					[
 						"set",
 						"setAttribute"
-					],
-					[
-						"update",
-						"updateUi"
 					],
 					[
 						"VIDEO",
@@ -212,10 +316,6 @@
 					[
 						"frame",
 						"frameHeight\t(video.js)"
-					],
-					[
-						"get",
-						"getData"
 					],
 					[
 						"fetch",
@@ -310,10 +410,6 @@
 						"methodeUri"
 					],
 					[
-						"methode",
-						"methodeParams"
-					],
-					[
 						"auth",
 						"authResponse"
 					],
@@ -356,14 +452,6 @@
 					[
 						"hydra",
 						"hydratedXML"
-					],
-					[
-						"method",
-						"methodeId"
-					],
-					[
-						"metho",
-						"methodeId"
 					],
 					[
 						"binary",
@@ -528,86 +616,6 @@
 					[
 						"age",
 						"ageEligible"
-					],
-					[
-						"rf",
-						"refresh"
-					],
-					[
-						"text",
-						"text-align\t(_guider.scss)"
-					],
-					[
-						"list-group",
-						"list-group-item"
-					],
-					[
-						"for",
-						"form-control"
-					],
-					[
-						"date",
-						"daterange"
-					],
-					[
-						"cur",
-						"current_page"
-					],
-					[
-						"admin",
-						"administrators_guiders_path\t(admin.html.erb)"
-					],
-					[
-						"e",
-						"echo\tprint\terb"
-					],
-					[
-						"body",
-						"body_end\t(_base.html.erb)"
-					],
-					[
-						"activity",
-						"activity-feed__table\t(_activity-feed.scss)"
-					],
-					[
-						"java",
-						"javascript_include_tag\tinclude javascript src\terb"
-					],
-					[
-						"period",
-						"period_index"
-					],
-					[
-						"per",
-						"period_index"
-					],
-					[
-						"helper",
-						"helper_method"
-					],
-					[
-						"second",
-						"secondary_slot"
-					],
-					[
-						"activit",
-						"activity-feed\t(_activity.html.erb)"
-					],
-					[
-						"acces",
-						"t-accessibility_requirements"
-					],
-					[
-						"rand",
-						"random_appointment"
-					],
-					[
-						"app",
-						"appointment"
-					],
-					[
-						"appoint",
-						"appointments"
 					]
 				]
 			},
@@ -617,25 +625,121 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 354.0,
-				"last_filter": "rename",
+				"height": 336.0,
+				"last_filter": "jspre",
 				"selected_items":
 				[
 					[
-						"rename",
-						"File: Rename"
+						"jspre",
+						"JsPrettier: Format Code"
 					],
 					[
-						"move",
-						"File: Move"
+						"jsp",
+						"JsPrettier: Format Code"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"jsx",
+						"Set Syntax: JSX"
+					],
+					[
+						"open br",
+						"File: Open In Browser - Production Server"
+					],
+					[
+						"dlete",
+						"File: Delete"
+					],
+					[
+						"delet",
+						"File: Delete"
+					],
+					[
+						"blame",
+						"git: blame current file"
+					],
+					[
+						"git blame",
+						"git: blame current file"
+					],
+					[
+						"js",
+						"Set Syntax: JavaScript"
+					],
+					[
+						"dupc",
+						"File: Duplicate"
+					],
+					[
+						"dupl",
+						"File: Duplicate"
+					],
+					[
+						"preview",
+						"Markdown Preview: Preview in Browser"
 					],
 					[
 						"delete",
 						"File: Delete"
 					],
 					[
+						"rename",
+						"File: Rename"
+					],
+					[
+						"git checkoout",
+						"git: checkout remote branch as local"
+					],
+					[
+						"del",
+						"File: Delete"
+					],
+					[
+						"dele",
+						"File: Delete"
+					],
+					[
+						"j",
+						"Set Syntax: JSX"
+					],
+					[
+						"install ",
+						"Package Control: Install Package"
+					],
+					[
+						"java",
+						"Set Syntax: JavaScript Next"
+					],
+					[
+						"react",
+						"Set Syntax: React Templates"
+					],
+					[
 						"json",
 						"JSON Reindent: reindent file or selection"
+					],
+					[
+						"",
+						"Bookmarks: Select Previous"
+					],
+					[
+						"dupcl",
+						"File: Duplicate"
+					],
+					[
+						"open in side",
+						"View: Toggle Open Files in Side Bar"
+					],
+					[
+						"set syn html",
+						"Set Syntax: HTML"
+					],
+					[
+						"move",
+						"File: Move"
 					],
 					[
 						"lower",
@@ -646,16 +750,8 @@
 						"Set Syntax: Shell Script (Bash)"
 					],
 					[
-						"install",
-						"Package Control: Install Package"
-					],
-					[
 						"javascript",
 						"Set Syntax: JavaScript Next"
-					],
-					[
-						"react",
-						"Set Syntax: React Templates"
 					],
 					[
 						"java ",
@@ -668,10 +764,6 @@
 					[
 						"reind",
 						"Indentation: Reindent Lines"
-					],
-					[
-						"preview",
-						"Markdown Preview: Preview in Browser"
 					],
 					[
 						"pre",
@@ -688,10 +780,6 @@
 					[
 						"xml",
 						"Set Syntax: XML"
-					],
-					[
-						"",
-						"Bookmarks: Select Previous"
 					],
 					[
 						"path",
@@ -716,10 +804,6 @@
 					[
 						"html",
 						"HTMLPrettify"
-					],
-					[
-						"java",
-						"Set Syntax: JavaScript Next"
 					],
 					[
 						"prefern user",
@@ -750,20 +834,8 @@
 						"File: Rename"
 					],
 					[
-						"delet",
-						"File: Delete"
-					],
-					[
 						"op",
 						"File: Open In Browser - Production Server"
-					],
-					[
-						"dlete",
-						"File: Delete"
-					],
-					[
-						"dele",
-						"File: Delete"
 					],
 					[
 						"new",
@@ -780,10 +852,6 @@
 					[
 						"scss",
 						"Set Syntax: SCSS"
-					],
-					[
-						"del",
-						"File: Delete"
 					],
 					[
 						"synax java",
@@ -928,10 +996,6 @@
 					[
 						"less",
 						"Set Syntax: LESS"
-					],
-					[
-						"js",
-						"Set Syntax: JavaScript"
 					]
 				],
 				"width": 530.0
@@ -955,143 +1019,167 @@
 			"file_history":
 			[
 				"/Users/benbarnett/Sites/ft/next-front-page/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/common/SublimeText3/Packages/JsPrettier/JsPrettier.sublime-settings",
+				"/Users/benbarnett/Sites/ft/next-media-api/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/o-video/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower.json",
+				"/Users/benbarnett/Sites/ft/next-video-editor/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-video-editor/secret-squirrel.js",
+				"/Users/benbarnett/Sites/ft/next-article/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-article/bower_components/o-buttons/bower.json",
+				"/Users/benbarnett/Sites/ft/n-methode/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/benbarnett.net/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/benbarnett.net/_posts/2009-04-09-kingley.markdown",
+				"/Users/benbarnett/Sites/benbarnett.net/_includes/analytics.html",
+				"/Users/benbarnett/Sites/ft/next-video-editor/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/ft/next-video-page/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/ramda/jsdoc-template/publish.js",
+				"/Users/benbarnett/Sites/benbarnett.net/_posts/2010-08-24-2010-08-24-making-an-interactive-svg-london-tube-map-with-raphael-js.html",
+				"/Users/benbarnett/Sites/benbarnett.net/rename.rb",
+				"/Users/benbarnett/Sites/benbarnett.net/import.rb",
+				"/Users/benbarnett/Sites/benbarnett.net/_site/jekyll/update/2017/06/15/welcome-to-jekyll.html",
+				"/Users/benbarnett/Sites/ft/next-video-editor/.env",
+				"/Users/benbarnett/Sites/ft/next-video-editor/package.json",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/helpers/methode/index.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/server/helpers/methode.spec.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/server/controllers/api/v1/webhooks/zencoder.spec.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/api/v1/webhooks/zencoder.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/smoke.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/expected-smoke/index.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/expected-smoke/migrated-capi.json",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/transcode.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/server/controllers/api/v1/videos/list.spec.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/api/v1/videos/upp.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/Makefile",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/index.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/components/Video/Video.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/models/video.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/server/controllers/api/v1/videos/update.spec.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/server/controllers/admin/api/publish.spec.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/api/v1/videos/update.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/components/Video/VideoEncodings.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/components/Video/VideoPublish.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/schedule-publish.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/clients/video.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/publish.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/@financial-times/n-methode/lib/methode/create.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/methode.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/helpers/mongo.js",
+				"/Users/benbarnett/Sites/ft/n-methode/lib/methode/create.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/actions/encodings.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/test/expected-smoke/migrated-video.json",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/api/upload.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/client/components/Video/VideoTranscription.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/api/v1/webhooks/three-play-media.js",
+				"/Users/benbarnett/Sites/ft/next-video-editor/webpack.config.js",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/migrate-to-s3/migrate-rendition-to-s3.py",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/README.md",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/1032346283001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/migrate-to-s3/migrate-thumbnails-to-s3.py",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/node_modules/har-schema/lib/beforeRequest.json",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/thumbnails.js",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/rendition-sources.js",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/Makefile",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/.env",
+				"/Users/benbarnett/.gitconfig",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/extract.js",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/brightcove.js",
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/106418950001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/4144683406001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/archive/4144674551001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/archive/1682152939001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/archive/1682152942001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/archive/1032346283001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/import/00012aaa-bbcd-3643-a485-81584f40352b",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/1039143385001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/951275232001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/85598239001",
+				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/1687751145001",
+				"/Users/benbarnett/Sites/ft/next-front-page/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/ft/next-front-page/server/sections/video-simple/view.html",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-simple/index.js",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-myft-ui/myft/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-concept/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/o-buttons/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-myft-ui/myft-common/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/main.js",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-scroller/_video-scroller.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/server/sections/video/view.html",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/ads/_ads.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/package.json",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/o-share/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/card/_card.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/teaser-collections/_myft-section.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/paid-post/_paid-post.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/premium-promo/_premium-promo.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/back-to-top/_back-to-top.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/client/components/myft/_myft-promo.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/public/head.css",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-concept/styles/_classifier.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-concept/styles/_concept.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-concept/styles/_myft-card.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/n-image/main.scss",
+				"/Users/benbarnett/Sites/ft/next-front-page/public/main.css",
+				"/Users/benbarnett/Sites/ft/o-video/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/ft/next-front-page/views/front-page.html",
 				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/o-teaser/src/scss/themes/_small.scss",
 				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-scroller/_player.scss",
 				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-scroller/index.js",
 				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-scroller/player.js",
-				"/Users/benbarnett/Sites/ft/next-front-page/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video/up-next.js",
 				"/Users/benbarnett/Sites/ft/next-front-page/client/components/highlight-dom-path/highlight-dom-path.js",
 				"/Users/benbarnett/Sites/ft/next-front-page/.git/addp-hunk-edit.diff",
-				"/Users/benbarnett/Sites/ft/next-front-page/client/components/video-scroller/_video-scroller.scss",
-				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/o-share/main.scss",
 				"/Users/benbarnett/Sites/ft/next-front-page/bower_components/o-video/src/js/video.js",
 				"/Users/benbarnett/Sites/ft/next-front-page/server/sections/video/model.js",
 				"/Users/benbarnett/.zshrc",
 				"/Users/benbarnett/Sites/ft/next-video-page/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/ft/next-video-page/bower_components/n-ui/components/n-ui/syndication/index.js",
-				"/Users/benbarnett/Sites/ft/next-video-page/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/ft/o-video/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/ft/next-video-editor/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-video-page/public/main-without-n-ui.js",
 				"/Users/benbarnett/Sites/ft/next-video-page/bower_components/o-video/src/js/video.js",
 				"/Users/benbarnett/Sites/ft/next-video-page/config/fragments/teaser-content.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/ft/next-video-editor/n.Makefile",
-				"/Users/benbarnett/Sites/ft/o-video/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/o-video/node_modules/colors/ReadMe.md",
-				"/Users/benbarnett/Sites/ft/n-methode/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/n-methode/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/ft/n-methode/node_modules/colors/ReadMe.md",
 				"/Users/benbarnett/Sites/ft/n-methode/utils/handle-response.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/@financial-times/n-methode/main.js",
-				"/Users/benbarnett/Sites/ft/next-media-api/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/ft/next-video-editor/package.json",
-				"/Users/benbarnett/Sites/ft/next-video-editor/server/utils/reingest-by-brightcove-id.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/.git/addp-hunk-edit.diff",
-				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/@financial-times/n-heroku-tools/tasks/configure.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/server/app.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/admin/upload.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/server/controllers/api/v1/routes/transcription.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/defs/tests/rename.js",
-				"/Users/benbarnett/Sites/ft/n-methode/.git/MERGE_MSG",
-				"/Users/benbarnett/Sites/ft/next-video-editor/.env",
-				"/Users/benbarnett/Sites/ft/next-video-editor/server/models/video.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/client/components/Upload/Upload.js",
-				"/Users/benbarnett/Sites/ft/n-methode/test/.keep",
-				"/Users/benbarnett/Sites/ft/n-methode/src/.keep",
-				"/etc/hosts",
-				"/Users/benbarnett/.ssh/config",
-				"/Users/benbarnett/Sites/pw/summary_generator/features/support/pages/appointment_summary_page.rb",
-				"/Users/benbarnett/Sites/pw/summary_generator/spec/models/appointment_summary_spec.rb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/pension_guidance/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Downloads/license.dat",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/govuk_frontend_toolkit/stylesheets/_colours.scss",
-				"/Users/benbarnett/Sites/common/SublimeText3/Packages/User/GitSavvy.sublime-settings",
-				"/Users/benbarnett/Sites/common/SublimeText3/Packages/User/Package Control.sublime-settings",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/config/environments/staging.rb",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/app/assets/javascripts/modules/calendars/company.es6",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/app/assets/javascripts/calendars/allocations.es6",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/app/assets/javascripts/calendars/company.es6",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/.git/addp-hunk-edit.diff",
-				"/Users/benbarnett/Sites/gitlapse/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/gitlapse/package.json",
-				"/Users/benbarnett/Sites/gitlapse/test/fixtures/server.sh",
-				"/Users/benbarnett/Sites/gitlapse/dist/index.html",
-				"/Users/benbarnett/Sites/gitlapse/test/fixtures/gitlapse-test/index.js",
-				"/Users/benbarnett/Sites/gitlapse/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/gitlapse/lib/GitWalker.js",
-				"/Users/benbarnett/Sites/gitlapse/gitlapse.json",
-				"/Users/benbarnett/Sites/gitlapse/README.md",
-				"/Users/benbarnett/Sites/gitlapse/test/fixtures/git/.keep",
-				"/Users/benbarnett/Sites/gitlapse/test/fixtures/app.js",
-				"/Users/benbarnett/Sites/gitlapse/test/test.js",
-				"/Users/benbarnett/Sites/gitlapse/test/config/setup.sh",
-				"/Users/benbarnett/Sites/gitlapse/config/default.json",
-				"/Users/benbarnett/Sites/pw/planner/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/pw/planner/spec/support/shared_examples_for_mailers.rb",
-				"/Users/benbarnett/Sites/pw/planner/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/planner/db/schema.rb",
-				"/Users/benbarnett/Sites/pw/planner/spec/features/booking_manager_views_booking_requests_spec.rb",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/app/views/appointments/edit.html.erb",
-				"/Users/benbarnett/Sites/pw/telephone_appointment_planner/app/assets/javascripts/date-range-picker.es6",
-				"/Users/benbarnett/Sites/pw/reporting/config/initializers/importers.rb",
-				"/Users/benbarnett/Sites/pw/reporting/lib/mail_retriever.rb",
-				"/Users/benbarnett/Sites/pw/planner/app/controllers/application_controller.rb",
-				"/Users/benbarnett/Sites/pw/planner/app/views/layouts/application.html.erb",
-				"/Users/benbarnett/Sites/pw/planner/app/assets/javascripts/scheduler.js",
-				"/Users/benbarnett/Sites/pw/planner/app/assets/javascripts/guider-scheduler.js",
-				"/Users/benbarnett/Sites/pw/planner/.travis.yml",
-				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/planner/node_modules/lodash/remove.js",
-				"/Users/benbarnett/Sites/pw/booking_locations/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/planner/vendor/assets/bower_components/fullcalendar-scheduler/dist/scheduler.css",
-				"/Users/benbarnett/Sites/pw/planner/app/assets/stylesheets/components/_activity-feed.scss",
-				"/Users/benbarnett/Sites/pw/planner/app/assets/javascripts/application.js",
-				"/Users/benbarnett/Sites/pw/planner/spec/controllers/booking_requests_controller_spec.rb",
-				"/Users/benbarnett/Sites/pw/planner/app/views/booking_requests/show.html.erb",
-				"/Users/benbarnett/Sites/pw/planner/node_modules/eslint/lib/rules/quotes.js",
-				"/Users/benbarnett/online-check.sh",
-				"/Users/benbarnett/Sites/pw/planner/tmp/cache/assets/sprockets/v3.0/jb/jb5ym92LfXwyJf3t1vuO11J-oPXTm5RXo4IR0L7KxFU.cache",
-				"/Users/benbarnett/Sites/pw/planner/.git/MERGE_MSG",
-				"/Users/benbarnett/Sites/pw/planner/app/models/appointment.rb",
-				"/Users/benbarnett/Sites/pw/planner/db/seeds.rb",
-				"/Users/benbarnett/Desktop/re",
-				"/Users/benbarnett/Sites/pw/planner/spec/helpers/booking_requests_helper_spec.rb",
-				"/Users/benbarnett/Sites/pw/planner/config/initializers/assets.rb",
-				"/Users/benbarnett/Sites/pw/planner/app/assets/stylesheets/booking_requests.scss",
-				"/Users/benbarnett/Sites/pw/planner/config/routes.rb",
-				"/Users/benbarnett/Sites/pw/location-register/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/location-register/app/views/scheduler/show.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/take_cash_in_chunks/_estimate.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/calculators/adjustable_income/_estimate.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/booking_requests/new.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/controllers/booking_requests_controller.rb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/personal_details/new.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/models/slot.rb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/moj.slot-picker/dist/stylesheets/moj.date-slider.css",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/moj.slot-picker/dist/javascripts/moj.slot-picker.js",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/booking_requests/show.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/.git/MERGE_MSG",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/appointment_summaries/new.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/vendor/assets/bower_components/bootstrap/less/grid.less",
-				"/Users/benbarnett/Sites/pw/pension_guidance/app/views/home/show.html.erb",
-				"/Users/benbarnett/Sites/pw/pension_guidance/config/routes.rb",
-				"/Users/benbarnett/Sites/pw/output-uat/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/pw/output/.git/rebase-merge/git-rebase-todo"
+				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/@financial-times/n-methode/main.js"
 			],
 			"find":
 			{
-				"height": 70.0
+				"height": 32.0
 			},
 			"find_in_files":
 			{
 				"height": 158.0,
 				"where_history":
 				[
+					"*.js, *.html, -*.map, -node_modules/*, -bower_components/*, -public/*",
+					"*.js, *.html, -*.map, -node_modules/*, -bower_components/*",
+					"*.js, -*.map, -node_modules/*, -bower_components/*",
+					"views/*.html",
+					"*.html",
+					"blog/_posts/*",
+					"*.js, -*.map, -node_modules/*, -bower_components/*",
+					"*.html",
+					"*.js, -*.map, -node_modules/*, -bower_components/*",
+					"",
+					"*.js, -*.map, -node_modules/*, -bower_components/*",
+					"-*.map, -node_modules/*, -bower_components/*",
+					"public/*.css, -*.map, -node_modules/*, -bower_components/*",
+					"*.scss",
+					"public/*.css, -*.map, -node_modules/*, -bower_components/*",
+					"public/*.css, -*.map, -node_modules, -bower_components",
+					"./public/*.css, -*.map",
+					"public/*.css, -*.map",
+					"public/*.css",
+					"*.scss",
+					"server/**/*.js",
+					"client/**/*.js",
+					"*",
+					"client/**/*.js",
 					"*.scss",
 					"*, -node_modules/*, -bower_components/*, -*.map",
 					"*, -node_modules/*, -bower_components/*, *.map",
@@ -1160,137 +1248,137 @@
 			},
 			"find_state":
 			{
-				"case_sensitive": true,
+				"case_sensitive": false,
 				"find_history":
 				[
-					"20px",
-					"share",
-					"state.elements.playlistItems[",
-					"state.elements.playlistItems[index]",
-					"(state.elements.playlistItems[index]",
-					"playlistItems",
-					".queue",
-					"video__",
-					"options",
-					"state.elements.videoPlayer",
-					"playDuringAutoplayHandler",
-					"state.elements.playlistItems[index]",
-					"state.elements.upNext",
-					"duration",
-					"getVideo (",
-					"playsFullScreen",
-					"onVideoPlaying",
-					"onVideo",
-					"onVideoEnd",
+					"28px",
+					"24px",
+					"placeholderHint",
+					"placeholder",
+					"24px",
+					"28px",
 					"heading",
-					"getColor",
-					"grey-tint2",
-					"1px solid rgba(255, 255, 255, 0.3)",
-					"itemIndex",
-					"M",
-					"30",
-					"70",
-					"section--video",
-					"focus",
-					"advertEventHandler",
-					"video__",
-					"video__share",
-					"section--video",
-					"+",
-					"autoplay",
-					"autoplayer",
-					"player",
-					"addEve",
-					"playsFull",
-					"onItemClick",
-					"state.elements.next",
-					"playsinline",
-					"initPlayer",
-					"oShareInstance",
-					".player",
-					"oVideoInstance",
-					"createVideoQueue",
-					"createVideoQueue();",
-					"onVideoEnd",
-					"() {",
-					"videoSection",
-					"-section",
-					"video-section__item",
-					"video-section",
-					"video",
-					"o-share",
-					"span",
-					"updateShare",
-					"enhanced",
-					"o-tea",
-					"pick",
-					"contentId",
-					"videoTitle",
-					"videoId",
-					"const video",
-					"video",
-					"VIDEO_SHARE_SELECTOR",
-					"VIDEO_SHARE_WRAPPER_SELECTOR",
-					"state.videoPlayer",
-					"$videoPlayer",
-					"state.$playlistItems",
-					"#bebec1",
-					"setAttribute",
-					"updateSaveForLater",
-					"playlistItemHeading.innerHTML",
-					"updateSaveForLater",
-					"myftUi",
-					"myFtUi",
-					"updateUi",
-					"myftUi",
-					"n-myft-ui",
-					"my-ft-ui",
-					"bottom",
-					"standfirst",
-					"link",
-					"itemLink",
-					"attributes",
-					"playerwrapper",
-					"sharewrapper",
-					"div",
-					"VIDEO_DATA_ATTR",
-					"getVideo",
-					"sharewrapper",
-					"playVideo",
-					"'o-teaser--playlist-item-playing'",
+					"o-teaser--video",
+					"$video-background-color",
+					"$video-background-color$video-background-color",
+					"50",
+					"onPlaylistItemClick",
+					"hover",
+					"core",
+					"Now",
+					"now-playing",
+					"updateNow",
+					"transcript",
+					"showTranscript",
+					"clickable",
+					"n-email-article",
+					"tour",
+					"alerts",
+					"emails",
+					"Newsletters",
+					"ALERTS",
+					"o-header",
+					"categories:",
+					"unpublish",
+					"methodeUuid",
+					"VideoImage",
+					"isPublished",
+					"canBeSyndicated",
+					"image",
+					"id",
+					"methode",
+					"publishMetho",
+					"publish",
+					"methodeStory.",
+					"parseResponse",
+					"return response.text()\n\t\t\t\t.then(text => {\n\t\t\t\t\tthrow new Error(`Server responded with \"${text}\" (${response.status})`);\n\t\t\t\t});",
+					".returns",
+					"content",
 					"share",
-					"updatePlayer",
-					"const",
-					":",
-					"encode url",
-					"h1",
-					"scroller",
-					"flags",
-					"require",
-					"waitFor",
-					"fetchMostPlayedVideos",
-					"o-",
-					"div",
-					"syndicationFlags",
-					"playlist-name",
-					"preview",
-					"frame",
-					"hero",
-					"mods.push(",
-					"hero",
-					"captions",
-					"frame",
-					"frameWidth",
-					".url",
-					"frame",
-					"console",
-					".video.",
-					"o-video",
-					"captions",
-					"videoCodec",
-					"captions",
-					"brightcoveData",
-					"bright"
+					"static_54ca13cfe4b02ee45f6b223f_54ca141be4b005082bd80a5a_54ca141ce4b005082bd80a72_1422529627284_sample-mask",
+					"wordp",
+					".xml",
+					"onlyHas",
+					"onlyHasFlv",
+					"encodingToElement",
+					"this.props.encodings",
+					"isExclusivelyFLV",
+					"pick",
+					"_id: 59415e5f2e058a4ca0dac4a2,\nupdatedAt: 2017-06-14T16:03:43.279Z,\ncreatedAt: 2017-06-14T16:03:43.198Z,\n__v: 0,\ntitle: 'Updated Title',\nmethodeId: '123$456',\nupdatedBy: null,\ncanBeSyndicated: true,\nrelated: [],\nannotations: [],\nshowTranscript: false,\nencodings: [],\nid: 'ffffde44-607c-450c-8749-88f1dfb9135d'",
+					"017-06-14T16:03:43.198Z,",
+					"2017-06-14T16:03:43.279Z",
+					"59415e5f2e058a4ca0dac4a2",
+					"calledWith",
+					"video.",
+					"dateformat",
+					"checkIsValid",
+					"http://com-ft-next-media-renditions.s3.amazonaws.com/",
+					"ftvideo.prod.zencoder.outputs",
+					"formatOutput",
+					"zencoder",
+					"s3",
+					"methodeDeleteStub",
+					"stub",
+					"sinon",
+					"let",
+					"resetHistory",
+					"methode",
+					"newVideo.title",
+					"newMethodeId",
+					"video",
+					"quimfrry",
+					"methodeId",
+					"await",
+					"findByUuid",
+					"video.",
+					"successfulDelete",
+					"uploadToMethode",
+					"methode.create",
+					"methode.delete",
+					"create",
+					".state.state",
+					".call",
+					"fetch(`/api/v1/videos/${this.props.id}`, {\n\t\t\t\t\t\t\tmethod: 'PUT',\n\t\t\t\t\t\t\tcredentials: 'same-origin',\n\t\t\t\t\t\t\theaders: {\n\t\t\t\t\t\t\t\t'Content-Type': 'application/json',\n\t\t\t\t\t\t\t\t'X-Api-Key': window.nextVideoEditor.videoEditorApiKey\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\ttimeout: 5000,\n\t\t\t\t\t\t\tbody: JSON.stringify(this.props.data)\n\t\t\t\t\t\t})",
+					"state.state",
+					"Encoding",
+					"pick",
+					"SCHEDULED_PUBLISH_AT_SET",
+					"onTranscribe",
+					"encoding",
+					"uuid",
+					"annotation",
+					"ANNOTATIONS",
+					"annotation",
+					"encodings",
+					"suggestions",
+					"encodingId",
+					"uuid",
+					"sign-s3",
+					"signS3",
+					"onEncodingChange",
+					"mioId",
+					"encodingToElement",
+					"Mio",
+					"\t",
+					"id",
+					"src",
+					"1032333507001",
+					"renditionTwoWith",
+					"src",
+					"video",
+					"rendition-source.js",
+					"block",
+					"display:block",
+					"small",
+					"%",
+					"nUiStylesheetStart",
+					"n-myft-ui__button",
+					"@import 'o-buttons",
+					"$o-buttons-is-silent",
+					"n-myft-ui__button",
+					"o-buttons",
+					"@include nUiStylesheetStart('head');",
+					"o-buttons"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -1320,7 +1408,7 @@
 			},
 			"incremental_find":
 			{
-				"height": 70.0
+				"height": 32.0
 			},
 			"input":
 			{
@@ -1348,20 +1436,452 @@
 				"selected_items":
 				[
 					[
+						"",
+						"server/controllers/admin/api/methode.js"
+					],
+					[
+						"edito",
+						"node_modules/.bin/editorconfig"
+					],
+					[
+						"pac",
+						"package.json"
+					],
+					[
+						"cir",
+						"circle.yml"
+					],
+					[
+						"pack",
+						"package.json"
+					],
+					[
+						"video.js",
+						"src/js/video.js"
+					],
+					[
+						"bower",
+						"bower.json"
+					],
+					[
+						"makef",
+						"Makefile"
+					],
+					[
+						"pacak",
+						"package.json"
+					],
+					[
+						"n-email/state",
+						"node_modules/@financial-times/n-email-article/data/state.js"
+					],
+					[
+						"package",
+						"package.json"
+					],
+					[
+						"o-buttons",
+						"bower_components/o-buttons/bower.json"
+					],
+					[
+						"make",
+						"Makefile"
+					],
+					[
+						"packa",
+						"package.json"
+					],
+					[
+						"web",
+						"webpack.config.js"
+					],
+					[
+						"special-sec",
+						"client/components/special-event/_special-event.scss"
+					],
+					[
+						"secre/lib/git",
+						"node_modules/@financial-times/secret-squirrel/lib/git.js"
+					],
+					[
+						"navigation-",
+						"server/middleware/navigation-newsletters.js"
+					],
+					[
+						"newsletters",
+						"server/models/v2/alerts/newsletters.js"
+					],
+					[
+						"canvas.html",
+						"blog/_posts/2011-06-02-using-html5-canvas-for-image-masks.html"
+					],
+					[
+						"kingley",
+						"blog/_posts/2009-04-09-kingley.markdown"
+					],
+					[
+						"admin/un",
+						"test/server/controllers/admin/api/unpublish.spec.js"
+					],
+					[
+						"methode.spe",
+						"test/server/helpers/methode.spec.js"
+					],
+					[
+						"admin/api/pub",
+						"server/controllers/admin/api/publish.js"
+					],
+					[
+						"admin/unp",
+						"server/controllers/admin/api/unpublish.js"
+					],
+					[
+						"videoun",
+						"client/components/Video/VideoUnpublish.js"
+					],
+					[
+						"secre",
+						"secret-squirrel.js"
+					],
+					[
+						"model/video",
+						"server/models/video.js"
+					],
+					[
+						"methode/index",
+						"server/helpers/methode/index.js"
+					],
+					[
+						"handle-response",
+						"shared/utils/handle-response.js"
+					],
+					[
+						"carousel",
+						"client/components/carousel/carousel.js"
+					],
+					[
+						"publish.",
+						"node_modules/ramda/jsdoc-template/publish.js"
+					],
+					[
+						"methode",
+						"server/controllers/admin/api/methode.js"
+					],
+					[
+						"unpublish",
+						"client/components/Video/VideoUnpublish.js"
+					],
+					[
+						"welcome",
+						"_site/jekyll/update/2017/06/15/welcome-to-jekyll.html"
+					],
+					[
+						"config",
+						"_config.yml"
+					],
+					[
+						"wlecome",
+						"_site/jekyll/update/2017/06/15/welcome-to-jekyll.html"
+					],
+					[
+						".env",
+						".env"
+					],
+					[
+						"client/componets/video",
+						"client/components/Video/Video.js"
+					],
+					[
+						"clients/video",
+						"client/clients/video.js"
+					],
+					[
+						"migrated-",
+						"test/expected-smoke/migrated-capi.json"
+					],
+					[
+						"expected",
+						"test/expected-smoke/index.js"
+					],
+					[
+						"n-methode/create",
+						"node_modules/@financial-times/n-methode/lib/methode/create.js"
+					],
+					[
+						"n-metdhoe/create",
+						"node_modules/@financial-times/n-methode/lib/methode/create.js"
+					],
+					[
+						"models/vid",
+						"server/models/video.js"
+					],
+					[
+						"api/trans",
+						"server/controllers/admin/api/transcode.js"
+					],
+					[
+						"expected-smoke",
+						"test/expected-smoke/index.js"
+					],
+					[
+						"migrated-vi",
+						"test/expected-smoke/migrated-video.json"
+					],
+					[
+						"migrate",
+						"test/expected-smoke/migrated-capi.json"
+					],
+					[
+						"expected-s",
+						"test/expected-smoke/index.js"
+					],
+					[
+						"smoke",
+						"test/smoke.js"
+					],
+					[
+						"migrated-ca",
+						"test/expected-smoke/migrated-capi.json"
+					],
+					[
+						"api/tran",
+						"server/controllers/admin/api/transcode.js"
+					],
+					[
+						"compone/video.js",
+						"client/components/Video/Video.js"
+					],
+					[
+						"transcode.js",
+						"server/controllers/admin/api/transcode.js"
+					],
+					[
+						"handle",
+						"shared/utils/handle-response.js"
+					],
+					[
+						"models/vide",
+						"server/models/video.js"
+					],
+					[
+						"pakc",
+						"package.json"
+					],
+					[
+						"bri",
+						"brightcove.js"
+					],
+					[
+						"ex",
+						"extract.js"
+					],
+					[
+						"bright",
+						"brightcove.js"
+					],
+					[
+						"rendi",
+						"rendition-sources.js"
+					],
+					[
+						"m",
+						"Makefile"
+					],
+					[
+						"read",
+						"README.md"
+					],
+					[
+						"br",
+						"node_modules/har-schema/lib/beforeRequest.json"
+					],
+					[
+						"readme",
+						"README.md"
+					],
+					[
+						"migrate-",
+						"migrate-to-s3/migrate-thumbnails-to-s3.py"
+					],
+					[
+						"951275232001",
+						"renditions/951275232001"
+					],
+					[
+						"85598239001",
+						"renditions/85598239001"
+					],
+					[
+						"renditio",
+						"rendition-sources.js"
+					],
+					[
+						"1032346283001",
+						"renditions/1032346283001"
+					],
+					[
+						"makefile",
+						"Makefile"
+					],
+					[
+						"server/video-simpl",
+						"server/sections/video-simple/view.html"
+					],
+					[
+						"main",
+						"client/main.scss"
+					],
+					[
+						"myftcommon",
+						"bower_components/n-myft-ui/myft-common/main.scss"
+					],
+					[
+						"video-scroll",
+						"client/components/video-scroller/_video-scroller.scss"
+					],
+					[
+						"_video",
+						"client/components/video-simple/_video.scss"
+					],
+					[
+						"client/main",
+						"client/main.js"
+					],
+					[
+						"myftcomm/ma",
+						"bower_components/n-myft-ui/myft-common/main.scss"
+					],
+					[
+						"myft-common",
+						"bower_components/n-myft-ui/myft-common/main.scss"
+					],
+					[
+						"myft/main",
+						"bower_components/n-myft-ui/myft/main.scss"
+					],
+					[
+						"components/card/ca",
+						"client/components/card/_card.scss"
+					],
+					[
+						"myft-section",
+						"client/components/teaser-collections/_myft-section.scss"
+					],
+					[
+						"paid-",
+						"client/components/paid-post/_paid-post.scss"
+					],
+					[
+						"premium-promo",
+						"client/components/premium-promo/_premium-promo.scss"
+					],
+					[
+						"back-",
+						"client/components/back-to-top/_back-to-top.scss"
+					],
+					[
+						"myft-promo",
+						"client/components/myft/_myft-promo.scss"
+					],
+					[
+						"o-share/main",
+						"bower_components/o-share/main.scss"
+					],
+					[
+						"o-buttons/main",
+						"bower_components/o-buttons/main.scss"
+					],
+					[
+						"classier",
+						"bower_components/n-concept/styles/_classifier.scss"
+					],
+					[
+						"conecptscs",
+						"bower_components/n-concept/styles/_concept.scss"
+					],
+					[
+						"myft-card",
+						"bower_components/n-concept/styles/_myft-card.scss"
+					],
+					[
+						"n-image/main",
+						"bower_components/n-image/main.scss"
+					],
+					[
+						"myft-common/ma",
+						"bower_components/n-myft-ui/myft-common/main.scss"
+					],
+					[
+						"n-concept/main",
+						"bower_components/n-concept/main.scss"
+					],
+					[
+						"myft-common/main",
+						"bower_components/n-myft-ui/myft-common/main.scss"
+					],
+					[
+						"video",
+						"client/components/video-simple/_video.scss"
+					],
+					[
+						"video-",
+						"client/components/video-scroller/_video-scroller.scss"
+					],
+					[
+						"compents/ads/a",
+						"client/components/ads/_ads.scss"
+					],
+					[
+						"bow",
+						"bower.json"
+					],
+					[
+						"get-rend",
+						"src/js/helpers/get-rendition.js"
+					],
+					[
+						"karma",
+						"karma.conf.js"
+					],
+					[
+						"ads.test",
+						"test/ads.test.js"
+					],
+					[
+						"ads.",
+						"src/js/ads.js"
+					],
+					[
+						"methode-metadata",
+						"server/helpers/methode/methode-metadata.js"
+					],
+					[
+						"helpers/methode/",
+						"server/helpers/methode/index.js"
+					],
+					[
+						"front-page",
+						"views/front-page.html"
+					],
+					[
+						"video-simple/",
+						"client/components/video-simple/index.js"
+					],
+					[
+						"video-simple/model",
+						"server/sections/video-simple/model.js"
+					],
+					[
+						"front-",
+						"views/front-page.html"
+					],
+					[
 						"o-teaser/small",
 						"bower_components/o-teaser/src/scss/themes/_small.scss"
 					],
 					[
 						"o-video/place",
 						"bower_components/o-video/src/scss/_placeholder.scss"
-					],
-					[
-						"",
-						"client/components/video/index.js"
-					],
-					[
-						"bower",
-						"bower.json"
 					],
 					[
 						"autopl",
@@ -1388,20 +1908,12 @@
 						"client/components/video/index.js"
 					],
 					[
-						"main",
-						"client/main.js"
-					],
-					[
 						"main.scs",
 						"client/main.scss"
 					],
 					[
 						"sections/video",
 						"server/sections/video/model.js"
-					],
-					[
-						"client/main",
-						"client/main.js"
 					],
 					[
 						"videos-list",
@@ -1434,430 +1946,6 @@
 					[
 						"colours",
 						"bower_components/n-card/src/_colours.scss"
-					],
-					[
-						"vidoescs",
-						"client/components/video-section/_video-section.scss"
-					],
-					[
-						"clients/keen",
-						"server/clients/keen.js"
-					],
-					[
-						"analyti",
-						"client/components/Analytics/Analytics.js"
-					],
-					[
-						"makefile",
-						"Makefile"
-					],
-					[
-						"n-ui/syndi",
-						"bower_components/n-ui/components/n-ui/syndication/index.js"
-					],
-					[
-						"packa",
-						"package.json"
-					],
-					[
-						"mode/vides",
-						"server/models/video.js"
-					],
-					[
-						"cont/vid",
-						"server/controllers/video.js"
-					],
-					[
-						"queries/vid",
-						"config/queries/video.js"
-					],
-					[
-						"make",
-						"Makefile"
-					],
-					[
-						"vid",
-						"server/models/video.js"
-					],
-					[
-						"o-video/ads",
-						"bower_components/o-video/src/js/ads.js"
-					],
-					[
-						".giti",
-						".gitignore"
-					],
-					[
-						"o-video/vidoe",
-						"bower_components/o-video/src/js/video.js"
-					],
-					[
-						"test/smoke",
-						"test/smoke.js"
-					],
-					[
-						"methode-met",
-						"server/helpers/methode-metadata.js"
-					],
-					[
-						"prop-t",
-						"node_modules/prop-types/prop-types.js"
-					],
-					[
-						"handle",
-						"shared/utils/handle-response.js"
-					],
-					[
-						"nma",
-						"n.Makefile"
-					],
-					[
-						"mak",
-						"Makefile"
-					],
-					[
-						"expected-bright",
-						"test/expected-smoke/brightcove-video.json"
-					],
-					[
-						"migra",
-						"test/expected-smoke/migrated-video.json"
-					],
-					[
-						"migrated",
-						"test/expected-smoke/migrated-capi.json"
-					],
-					[
-						"expected/migra",
-						"test/expected-smoke/migrated-upp.json"
-					],
-					[
-						"smoke",
-						"test/smoke.js"
-					],
-					[
-						"methode-metadata",
-						"server/helpers/methode-metadata.js"
-					],
-					[
-						"read",
-						"README.md"
-					],
-					[
-						"package",
-						"package.json"
-					],
-					[
-						"karma",
-						"karma.conf.js"
-					],
-					[
-						"readm",
-						"node_modules/colors/ReadMe.md"
-					],
-					[
-						"p",
-						"package.json"
-					],
-					[
-						"video.tst",
-						"test/video.test.js"
-					],
-					[
-						"video.",
-						"src/js/video.js"
-					],
-					[
-						"meta",
-						"test/fixture/metadata-default.xml"
-					],
-					[
-						"main.spec",
-						"test/main.spec.js"
-					],
-					[
-						"handle-r",
-						"lib/methode/shared/handle-response.js"
-					],
-					[
-						".git",
-						".gitignore"
-					],
-					[
-						"readme",
-						"node_modules/colors/ReadMe.md"
-					],
-					[
-						"pack",
-						"package.json"
-					],
-					[
-						"upload-",
-						"bin/upload-to-test.js"
-					],
-					[
-						"shared/",
-						"lib/methode/shared/handle-response.js"
-					],
-					[
-						"uploadto",
-						"bin/upload-to-test.js"
-					],
-					[
-						"elastic",
-						"server/clients/elastic.js"
-					],
-					[
-						"models/vid",
-						"server/models/video.js"
-					],
-					[
-						"api/video",
-						"server/controllers/api/v1/routes/video.js"
-					],
-					[
-						"handle-response",
-						"shared/utils/handle-response.js"
-					],
-					[
-						"capi-trans",
-						"server/models/capi-transform.js"
-					],
-					[
-						".env",
-						".env"
-					],
-					[
-						"upload",
-						"server/controllers/admin/upload.js"
-					],
-					[
-						"circle",
-						"circle.yml"
-					],
-					[
-						"methode",
-						"server/controllers/api/v1/helpers/methode-story.xml"
-					],
-					[
-						"n-methode/main",
-						"node_modules/@financial-times/n-methode/main.js"
-					],
-					[
-						"methode-",
-						"server/controllers/api/v1/helpers/methode-story.xml"
-					],
-					[
-						".es",
-						".eslintrc.js"
-					],
-					[
-						"story",
-						"server/controllers/api/v1/helpers/methode-story.xml"
-					],
-					[
-						"elasitc",
-						"server/clients/elastic.js"
-					],
-					[
-						"n-emthode/main",
-						"node_modules/@financial-times/n-methode/main.js"
-					],
-					[
-						"n-methode",
-						"node_modules/@financial-times/n-methode/main.js"
-					],
-					[
-						"methoe",
-						"server/controllers/api/v1/helpers/methode-story.xml"
-					],
-					[
-						"test.js",
-						"test.js"
-					],
-					[
-						"three",
-						"server/controllers/api/v1/routes/webhooks/three-play-media.js"
-					],
-					[
-						"methode-s",
-						"server/controllers/api/v1/helpers/methode-story.xml"
-					],
-					[
-						"vido",
-						"server/models/video.js"
-					],
-					[
-						"modelvideo",
-						"server/models/video.js"
-					],
-					[
-						"methode-stor",
-						"server/controllers/api/v1/helpers/methode-story.js"
-					],
-					[
-						"config-vars",
-						"node_modules/@financial-times/n-heroku-tools/lib/config-vars-key.js"
-					],
-					[
-						"tasks/conf",
-						"node_modules/@financial-times/n-heroku-tools/tasks/configure.js"
-					],
-					[
-						"nht",
-						"node_modules/.bin/nht"
-					],
-					[
-						"video.spe",
-						"test/server/controllers/api/v1/routes/video.spec.js"
-					],
-					[
-						"upload.spe",
-						"test/server/controllers/admin/upload.spec.js"
-					],
-					[
-						"video",
-						"server/models/video.js"
-					],
-					[
-						"methode-doc",
-						"server/controllers/api/v1/helpers/methode-document.js"
-					],
-					[
-						"methoded",
-						"server/controllers/api/v1/helpers/methode-document.js"
-					],
-					[
-						"capi-tran",
-						"server/models/capi-transform.js"
-					],
-					[
-						"publish",
-						"server/controllers/admin/publish.js"
-					],
-					[
-						"pub",
-						"server/controllers/admin/publish.js"
-					],
-					[
-						"rename",
-						"node_modules/defs/tests/rename.js"
-					],
-					[
-						"helpers/mon",
-						"test/helpers/mongo.js"
-					],
-					[
-						"rea",
-						"README.md"
-					],
-					[
-						"m",
-						"Makefile"
-					],
-					[
-						"makef",
-						"Makefile"
-					],
-					[
-						"app",
-						"server/app.js"
-					],
-					[
-						"preview.html",
-						"app/views/appointment_summaries/preview.html.erb"
-					],
-					[
-						"var",
-						"app/assets/stylesheets/lib/_variables.scss"
-					],
-					[
-						"varia",
-						"app/assets/stylesheets/lib/_variables.scss"
-					],
-					[
-						"tesco",
-						"content/tesco.md"
-					],
-					[
-						"variables",
-						"app/assets/stylesheets/lib/_variables.scss"
-					],
-					[
-						"_base.html",
-						"app/views/layouts/_base.html.erb"
-					],
-					[
-						"nav.html",
-						"app/views/components/_nav.html.erb"
-					],
-					[
-						"page_nav",
-						"app/views/components/_page_nav.html.erb"
-					],
-					[
-						"logo_link",
-						"app/views/components/_logo_link.html.erb"
-					],
-					[
-						"two",
-						"app/views/layouts/_two_column.erb"
-					],
-					[
-						"personal",
-						"app/views/appointments/_personal_details_form.html.erb"
-					],
-					[
-						"appoint/edit",
-						"app/views/appointments/edit.html.erb"
-					],
-					[
-						"modelaci",
-						"app/models/activity.rb"
-					],
-					[
-						"tapbase",
-						"app/assets/javascripts/tap-base.es6"
-					],
-					[
-						"pusher",
-						"app/jobs/pusher_activity_notification_job.rb"
-					],
-					[
-						"applhtml",
-						"app/views/layouts/application.html.erb"
-					],
-					[
-						"appljs",
-						"app/assets/javascripts/application.js"
-					],
-					[
-						"produc",
-						"config/environments/production.rb"
-					],
-					[
-						"staging",
-						"config/environments/staging.rb"
-					],
-					[
-						"activty_fee",
-						"app/views/activities/_activity_feed.html.erb"
-					],
-					[
-						"appointedit",
-						"app/views/appointments/edit.html.erb"
-					],
-					[
-						"advance",
-						"app/assets/javascripts/modules/advanced-select.es6"
-					],
-					[
-						"company",
-						"app/assets/javascripts/modules/calendars/company.es6"
-					],
-					[
-						"allo",
-						"app/assets/javascripts/modules/calendars/allocations.es6"
 					]
 				],
 				"width": 0.0

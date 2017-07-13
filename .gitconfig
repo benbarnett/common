@@ -33,7 +33,6 @@
 	autosquash = true
 [core]
 	excludesfile = /Users/benbarnett/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52

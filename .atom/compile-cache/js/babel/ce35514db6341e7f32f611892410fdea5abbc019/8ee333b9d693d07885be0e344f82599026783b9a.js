@@ -1,0 +1,24 @@
+/** @babel */
+/* eslint-env jasmine, atomtest */
+
+/*
+  This file contains verifying specs for:
+  https://github.com/sindresorhus/atom-editorconfig/issues/94
+*/
+
+var _commandsGenerate = require('../commands/generate');
+
+describe('editorconfig with disabled whitespace-package', function () {
+	beforeEach(function () {
+		waitsForPromise(function () {
+			return Promise.all([atom.packages.activatePackage('editorconfig')]);
+		});
+	});
+
+	describe('when generating an .editorconfig', function () {
+		it('shouldn\'t throw an exception', function () {
+			expect(_commandsGenerate.init).not.toThrow();
+		});
+	});
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9iZW5iYXJuZXR0Ly5hdG9tL3BhY2thZ2VzL2VkaXRvcmNvbmZpZy9zcGVjL2lzczk0LXNwZWMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Z0NBUXFDLHNCQUFzQjs7QUFFM0QsUUFBUSxDQUFDLCtDQUErQyxFQUFFLFlBQU07QUFDL0QsV0FBVSxDQUFDLFlBQU07QUFDaEIsaUJBQWUsQ0FBQztVQUNmLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FDWCxJQUFJLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxjQUFjLENBQUMsQ0FDN0MsQ0FBQztHQUFBLENBQUMsQ0FBQztFQUNMLENBQUMsQ0FBQzs7QUFFSCxTQUFRLENBQUMsa0NBQWtDLEVBQUUsWUFBTTtBQUNsRCxJQUFFLENBQUMsK0JBQStCLEVBQUUsWUFBTTtBQUN6QyxTQUFNLHdCQUFnQixDQUFDLEdBQUcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztHQUNyQyxDQUFDLENBQUM7RUFDSCxDQUFDLENBQUM7Q0FDSCxDQUFDLENBQUMiLCJmaWxlIjoiL1VzZXJzL2JlbmJhcm5ldHQvLmF0b20vcGFja2FnZXMvZWRpdG9yY29uZmlnL3NwZWMvaXNzOTQtc3BlYy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKiBAYmFiZWwgKi9cbi8qIGVzbGludC1lbnYgamFzbWluZSwgYXRvbXRlc3QgKi9cblxuLypcbiAgVGhpcyBmaWxlIGNvbnRhaW5zIHZlcmlmeWluZyBzcGVjcyBmb3I6XG4gIGh0dHBzOi8vZ2l0aHViLmNvbS9zaW5kcmVzb3JodXMvYXRvbS1lZGl0b3Jjb25maWcvaXNzdWVzLzk0XG4qL1xuXG5pbXBvcnQge2luaXQgYXMgZ2VuZXJhdGVDb25maWd9IGZyb20gJy4uL2NvbW1hbmRzL2dlbmVyYXRlJztcblxuZGVzY3JpYmUoJ2VkaXRvcmNvbmZpZyB3aXRoIGRpc2FibGVkIHdoaXRlc3BhY2UtcGFja2FnZScsICgpID0+IHtcblx0YmVmb3JlRWFjaCgoKSA9PiB7XG5cdFx0d2FpdHNGb3JQcm9taXNlKCgpID0+XG5cdFx0XHRQcm9taXNlLmFsbChbXG5cdFx0XHRcdGF0b20ucGFja2FnZXMuYWN0aXZhdGVQYWNrYWdlKCdlZGl0b3Jjb25maWcnKVxuXHRcdFx0XSkpO1xuXHR9KTtcblxuXHRkZXNjcmliZSgnd2hlbiBnZW5lcmF0aW5nIGFuIC5lZGl0b3Jjb25maWcnLCAoKSA9PiB7XG5cdFx0aXQoJ3Nob3VsZG5cXCd0IHRocm93IGFuIGV4Y2VwdGlvbicsICgpID0+IHtcblx0XHRcdGV4cGVjdChnZW5lcmF0ZUNvbmZpZykubm90LnRvVGhyb3coKTtcblx0XHR9KTtcblx0fSk7XG59KTtcbiJdfQ==
