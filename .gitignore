@@ -1,3 +1,5 @@
 # Folder view configuration files
 .DS_Store
 .atom/compile-cache
+SublimeText3/Backup
+SublimeText3/Cache
