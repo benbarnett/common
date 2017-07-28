@@ -13,6 +13,7 @@
 	"font_size": 15.0,
 	"ignored_packages":
 	[
+		"GitSavvy",
 		"Vintage"
 	],
 	"indent_guide_options":

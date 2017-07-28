@@ -11,6 +11,7 @@
       panelContrast: true
       panelShadows: true
   core:
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"

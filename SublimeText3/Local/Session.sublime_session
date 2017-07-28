@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/Users/benbarnett/Sites/ft/next-es-interface",
 		"/Users/benbarnett/Sites/ft/next-brightcove-archive",
 		"/Users/benbarnett/Sites/ft/next-front-page",
 		"/Users/benbarnett/Sites/ft/n-methode",
@@ -94,7 +95,7 @@
 		"/Users/bbarnett/Sites/payday_loans_intervention"
 	],
 	"last_version": 3126,
-	"last_window_id": 677,
+	"last_window_id": 691,
 	"log_indexing": false,
 	"settings":
 	{
@@ -1018,21 +1019,24 @@
 			},
 			"file_history":
 			[
+				"/Users/benbarnett/Sites/ft/next-video-page/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-front-page/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-article/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-search-page/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-search-page/.git/rebase-merge/git-rebase-todo",
+				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/common/SublimeText3/Packages/JsPrettier/JsPrettier.sublime-settings",
 				"/Users/benbarnett/Sites/ft/next-media-api/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/o-video/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-front-page/bower.json",
 				"/Users/benbarnett/Sites/ft/next-video-editor/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-video-editor/secret-squirrel.js",
-				"/Users/benbarnett/Sites/ft/next-article/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-article/bower_components/o-buttons/bower.json",
 				"/Users/benbarnett/Sites/ft/n-methode/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/benbarnett.net/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/benbarnett.net/_posts/2009-04-09-kingley.markdown",
 				"/Users/benbarnett/Sites/benbarnett.net/_includes/analytics.html",
 				"/Users/benbarnett/Sites/ft/next-video-editor/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/ft/next-video-page/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/ramda/jsdoc-template/publish.js",
 				"/Users/benbarnett/Sites/benbarnett.net/_posts/2010-08-24-2010-08-24-making-an-interactive-svg-london-tube-map-with-raphael-js.html",
 				"/Users/benbarnett/Sites/benbarnett.net/rename.rb",
@@ -1084,7 +1088,6 @@
 				"/Users/benbarnett/.gitconfig",
 				"/Users/benbarnett/Sites/ft/next-brightcove-archive/extract.js",
 				"/Users/benbarnett/Sites/ft/next-brightcove-archive/brightcove.js",
-				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/106418950001",
 				"/Users/benbarnett/Sites/ft/next-brightcove-archive/renditions/4144683406001",
 				"/Users/benbarnett/Sites/ft/next-brightcove-archive/archive/4144674551001",
@@ -1143,9 +1146,7 @@
 				"/Users/benbarnett/Sites/ft/next-video-editor/n.Makefile",
 				"/Users/benbarnett/Sites/ft/o-video/node_modules/colors/ReadMe.md",
 				"/Users/benbarnett/Sites/ft/n-methode/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/ft/n-methode/node_modules/colors/ReadMe.md",
-				"/Users/benbarnett/Sites/ft/n-methode/utils/handle-response.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/node_modules/@financial-times/n-methode/main.js"
+				"/Users/benbarnett/Sites/ft/n-methode/node_modules/colors/ReadMe.md"
 			],
 			"find":
 			{
