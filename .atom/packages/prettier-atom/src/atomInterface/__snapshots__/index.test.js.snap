@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`getPrettierOptions() returns all prettier options 1`] = `undefined`;

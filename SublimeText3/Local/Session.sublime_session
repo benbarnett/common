@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/Users/benbarnett/Sites/common",
 		"/Users/benbarnett/Sites/ft/next-es-interface",
 		"/Users/benbarnett/Sites/ft/next-brightcove-archive",
 		"/Users/benbarnett/Sites/ft/next-front-page",
@@ -17,7 +18,6 @@
 		"/Users/benbarnett/Sites/ft/o-teaser-collection",
 		"/Users/benbarnett/Sites/benbarnett.net",
 		"/Users/benbarnett/Sites/ft/n-zencoder",
-		"/Users/benbarnett/Sites/common",
 		"/Users/benbarnett/Sites/benbarnett.github.com",
 		"/Users/benbarnett/Sites/ft/o-teaser",
 		"/Users/benbarnett/Sites/ft/firefox-captions-test",
@@ -95,7 +95,7 @@
 		"/Users/bbarnett/Sites/payday_loans_intervention"
 	],
 	"last_version": 3126,
-	"last_window_id": 691,
+	"last_window_id": 697,
 	"log_indexing": false,
 	"settings":
 	{
@@ -1019,9 +1019,12 @@
 			},
 			"file_history":
 			[
+				"/Users/benbarnett/Sites/ft/next-audio-trigger/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ftlabs/audio-management/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/ft/next-article/.git/COMMIT_EDITMSG",
+				"/Users/benbarnett/Sites/common/aliases.sh",
 				"/Users/benbarnett/Sites/ft/next-video-page/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-front-page/.git/COMMIT_EDITMSG",
-				"/Users/benbarnett/Sites/ft/next-article/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-search-page/.git/COMMIT_EDITMSG",
 				"/Users/benbarnett/Sites/ft/next-search-page/.git/rebase-merge/git-rebase-todo",
 				"/Users/benbarnett/Sites/common/.git/COMMIT_EDITMSG",
@@ -1143,10 +1146,7 @@
 				"/Users/benbarnett/Sites/ft/next-video-page/public/main-without-n-ui.js",
 				"/Users/benbarnett/Sites/ft/next-video-page/bower_components/o-video/src/js/video.js",
 				"/Users/benbarnett/Sites/ft/next-video-page/config/fragments/teaser-content.js",
-				"/Users/benbarnett/Sites/ft/next-video-editor/n.Makefile",
-				"/Users/benbarnett/Sites/ft/o-video/node_modules/colors/ReadMe.md",
-				"/Users/benbarnett/Sites/ft/n-methode/.git/rebase-merge/git-rebase-todo",
-				"/Users/benbarnett/Sites/ft/n-methode/node_modules/colors/ReadMe.md"
+				"/Users/benbarnett/Sites/ft/next-video-editor/n.Makefile"
 			],
 			"find":
 			{
