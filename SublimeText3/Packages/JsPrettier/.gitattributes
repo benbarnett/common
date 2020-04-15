@@ -1,3 +1,0 @@
-* text=auto
-*.cmd text eol=crlf
-appveyor.yml text eol=crlf

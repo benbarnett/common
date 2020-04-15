@@ -1,8 +1,0 @@
-{
-  "prettier_cli_path": "/Users/benbarnett/.nvm/versions/node/v8.1.3/bin/prettier",
-  "prettier_options": {
-    "singleQuote": true,
-    "jsxBracketSameLine": true,
-    "bracketSpacing": false
-  }
-}
